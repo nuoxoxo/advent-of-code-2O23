@@ -1,0 +1,6 @@
+*
+!*.py
+!*.ts
+!*.go
+!*.md
+!Makefile
