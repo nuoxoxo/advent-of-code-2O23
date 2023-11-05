@@ -30,3 +30,57 @@ go     | <kbd>var grid [][]int</kbd>
 ||
 cc     | `vector<int> arr(k, 0)`
 go     | <kbd>arr := make([]int, k)</kbd>
+
+### PY
+_Reading data_
+```py
+infile = _
+from helpers.reader import read_as_list
+suffix = '1804.' + str(infile)
+lines = read_as_list( suffix )
+lines.pop()
+```
+_Tricks_
+```py
+defaultdict(lambda: 0)
+defaultdict(int)
+```
+### TS
+_To Start with_
+```ts
+$ npm i --save-dev @types/node
+$ npm install axios
+
+// Run .ts with
+$(camp) npx && node 
+$(home) tsx && node
+```
+_Reading data_
+```go
+const choice = 0
+const axios = require('axios')
+const url = 'https://raw.githubusercontent.com/nuoxoxo/in/main/aoc/180█.' + choice.toString();
+
+(async () => {
+
+    try {
+        const resp = await axios.get( url )
+        const lines = resp.data.split('\n')
+        console.log(resp)
+        console.log(lines)
+    } catch (e) {
+        console.log('error - ', e)
+    }
+})()
+```
+_Tricks_
+```go
+...
+D[id] = D[id] ? D[id] + 1 : 1
+D[id] = ( D[id] || 1 ) + 1
+...
+// In a JavaScript/TypeScript for...in loop to iterate
+// over the properties of an object, 
+// the loop variable is always a string even if
+// the keys in the object are numbers
+```
