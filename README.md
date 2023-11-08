@@ -41,7 +41,7 @@ suffix = '1804.' + str(infile)
 lines = read_as_list( suffix )
 lines.pop()
 ```
-_Tricks_
+_Thingy_
 ```py
 defaultdict(lambda: 0)
 defaultdict(int)
@@ -74,7 +74,7 @@ const url = 'https://raw.githubusercontent.com/nuoxoxo/in/main/aoc/180█.' + ch
     }
 })()
 ```
-_Tricks_
+_Thingy_
 ```go
 ...
 D[id] = D[id] ? D[id] + 1 : 1
