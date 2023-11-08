@@ -15,17 +15,18 @@ go     | <kbd>E := make( map[ *Node ] *Node )</kbd>
 py     | `E = defaultdict(lambda: None)`
 cc     | `map<Node*, Node*> E`
 ||
-&#8203;| _- Make a pointer -_
+|| _- Make a pointer -_
 cc     | `ListNode *prev = nullptr`
 go     | <kbd>prev := (*ListNode)(nil)</kbd>
 ||
-&#8203;| _- Make an array or a 2D grid -_
+|| _- Make an array -_ 
 cc     | `vector<ListNode*> arr`
 go     | <kbd>res := make([]*ListNode, 0)</kbd>
 ||
 cc     | `vector<int> arr(k, 0)`
 go     | <kbd>arr := make([]int, k)</kbd>
 ||
+|| _- Make a 2D grid -_ 
 cc     | `vector<vector<int>> grid`
 go     | <kbd>var grid [][]int</kbd>
 &#8203;| <kbd>grid := make([][]int, 0)</kbd>
