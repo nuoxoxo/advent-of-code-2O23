@@ -23,12 +23,13 @@ go     | <kbd>prev := (*ListNode)(nil)</kbd>
 cc     | `vector<ListNode*> arr`
 go     | <kbd>res := make([]*ListNode, 0)</kbd>
 ||
+cc     | `vector<int> arr(k, 0)`
+go     | <kbd>arr := make([]int, k)</kbd>
+||
 cc     | `vector<vector<int>> grid`
 go     | <kbd>var grid [][]int</kbd>
 &#8203;| <kbd>grid := make([][]int, 0)</kbd>
-||
-cc     | `vector<int> arr(k, 0)`
-go     | <kbd>arr := make([]int, k)</kbd>
+
 
 ### PY
 _Reading data_
