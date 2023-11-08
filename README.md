@@ -1,7 +1,7 @@
 # Todo
-- _py : boilerplate - fetch . try reading env var_
-- _ts : boilerplate - for quick compilation_
+- _py : boilerplate - try fetching . try reading env var_
 - _cc : Makefile - to prepare from last year_
+- _ts : boilerplate - for quick compilation_
 
 
 # Perks of Go
