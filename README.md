@@ -8,7 +8,6 @@ go     | <kbd>s := strconv.Itoa(-42)</kbd>
 ||
 &#8203;| _- Sort an int array -_
 ts     | `nums.sort((a, b) => a - b)`
-py     | `nums.sort()`
 go     | <kbd>sort.Ints(nums)</kbd>
 ||
 &#8203;| _- Make a dict/map -_
