@@ -3,6 +3,7 @@
 - _cc : Makefile - to prepare from last year_
 - _ts : boilerplate - for quick compilation_
 
+<!--
 
 # Perks of Go
 
@@ -91,3 +92,5 @@ D[id] = ( D[id] || 1 ) + 1
 // the loop variable is always a string even if
 // the keys in the object are numbers
 ```
+
+-->
