@@ -1,7 +1,9 @@
 # Todo
-- py : boilerplate - try fetching using API and .env
+- py : boilerplate - try fetching 
 - cc : Makefile - to prepare from last year 
-- ts : boilerplate - needs quick compilation
+- ts
+  - [x] boilerplate: done
+  - [x] hot compilation: using Deno
 
 <!--
 
