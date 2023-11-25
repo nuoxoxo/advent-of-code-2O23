@@ -1,7 +1,7 @@
 # Todo
-- _py : boilerplate - try fetching . try reading env var_
-- _cc : Makefile - to prepare from last year_
-- _ts : boilerplate - for quick compilation_
+- py : boilerplate - try fetching using API and .env
+- cc : Makefile - to prepare from last year 
+- ts : boilerplate - needs quick compilation
 
 <!--
 
