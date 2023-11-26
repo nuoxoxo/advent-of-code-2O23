@@ -4,6 +4,7 @@
 - ts
   - [x] boilerplate: done
   - [x] HMR: using Deno
+  - [x] bash script: run `sh Deno.sh day{1|2|...}`
 
 <!--
 
