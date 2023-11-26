@@ -1,11 +1,11 @@
-# Todo
-- py
-  - [x] boilerplate: done
-  - [x] fetching: using `os.getenv` 
-- ts
-  - [x] boilerplate: done
-  - [x] HMR: using Deno
-  - [x] bash script: run `sh Deno.sh day{1|2|...}`
+Python
+- [x] boilerplate: done
+- [x] fetching: using `os.getenv` 
+
+Typescipt
+- [x] boilerplate: done
+- [x] HMR: using Deno
+- [x] bash script: run `sh Deno.sh day{1|2|...}`
 
 <!--
 
