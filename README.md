@@ -1,6 +1,7 @@
 # Todo
-- py : boilerplate - try fetching 
-- cc : Makefile - to prepare from last year 
+- py
+  - [x] boilerplate: done
+  - [x] fetching: using `os.getenv` 
 - ts
   - [x] boilerplate: done
   - [x] HMR: using Deno
