@@ -3,4 +3,5 @@
 !*.ts
 !*.go
 !*.md
+!*.sh
 !Makefile

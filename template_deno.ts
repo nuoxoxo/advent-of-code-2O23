@@ -22,8 +22,9 @@ fetch_input(day).then((infile) => {
     console.log(infile)
 
     // solution
-    console.log('part 1:')
-    console.log('part 2:')
+    console.log(infile)
+    console.log('part 1: 🦕')
+    console.log('part 2: 🦖')
 
 }).catch((err) => { throw err })
 
