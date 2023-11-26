@@ -17,16 +17,9 @@ let fetch_input = async (day: number) : Promise<string> => {
 
 fetch_input(day).then( (infile) => {
 
-    let lines = infile['data'].split('\n\n').map((bloc) => {
-        return bloc.split('\n').map(Number)
-    })
-    let sums = lines.map((bloc) => {
-        return bloc.reduce((a, c) => a + c, 0)
-    })
-    console.log('part 1:', Math.max(...sums))
-    sums.sort((a, b) => b - a)
-    let top3 = sums[0] + sums[1] + sums[2]
-    console.log('part 2:', top3)
+    console.log(infile)
+    console.log('part 1:')
+    console.log('part 2:')
 
 }).catch ((err) => { throw err })
 
