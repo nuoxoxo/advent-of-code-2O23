@@ -3,7 +3,7 @@
 - cc : Makefile - to prepare from last year 
 - ts
   - [x] boilerplate: done
-  - [x] hot compilation: using Deno
+  - [x] HMR: using Deno
 
 <!--
 
