@@ -1,12 +1,12 @@
-aoc session
-- `$ export AOC_SESSION=...`
-
 Python
 - fetching: using `os.getenv` 
 
 Ts
 - HMR using Denon: run `denon start Filename.ts`
 - non-watch mode: run `sh Deno.sh {1|2|...}`
+
+aoc session
+- `$ export AOC_SESSION=...`
 
 <!--
 
