@@ -13,7 +13,9 @@ aoc session
 $ export AOC_SESSION=...
 ```
 
-###### &#8302;
+<!------------ FOOTNOTE ------------>
+
+# &#8203;
 Install Denon
 ```
 ✗ deno install --allow-read --allow-run -f https://deno.land/x/denon/denon.ts
