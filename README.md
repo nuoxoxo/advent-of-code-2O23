@@ -4,8 +4,8 @@ Python
 
 Typescipt
 - [x] boilerplate: done
-- [x] HMR: using Deno
-- [x] bash script: run `sh Deno.sh day{1|2|...}`
+- [x] HMR w/ Denon: run `denon start Filename.ts`
+- [x] cook w/ Deno: run `sh Deno.sh day{1|2|...}`
 
 <!--
 
