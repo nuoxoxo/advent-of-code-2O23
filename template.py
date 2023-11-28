@@ -16,7 +16,6 @@ def get_input(day):
     return resp.text
 
 def main():
-
     infile = get_input(day).split('\n')
     infile.pop()
     print(infile, f'len: {len(infile)}')
