@@ -5,6 +5,9 @@ Typescript
 - HMR using Denon: run `denon start Filename.ts`
 - non-watch mode: run `sh Deno.sh {1|2|...}`
 
+Go
+- todo w. air or fresh
+
 aoc session
 ```j
 $ export AOC_SESSION=...
