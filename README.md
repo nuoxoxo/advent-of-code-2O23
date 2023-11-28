@@ -6,7 +6,9 @@ Ts
 - non-watch mode: run `sh Deno.sh {1|2|...}`
 
 aoc session
-- `$ export AOC_SESSION=...`
+```j
+$ export AOC_SESSION=...
+```
 
 <!--
 
