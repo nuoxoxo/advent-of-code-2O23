@@ -5,7 +5,7 @@ Python
 Ts
 - [x] boilerplate 
 - [x] HMR using Denon: run `denon start Filename.ts`
-- [x] non-watch mode: run `sh Deno.sh day{1|2|...}`
+- [x] non-watch mode: run `sh Deno.sh {1|2|...}`
 
 <!--
 
