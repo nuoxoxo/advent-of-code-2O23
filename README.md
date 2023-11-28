@@ -1,3 +1,8 @@
+aoc session
+```j
+$ export AOC_SESSION=...
+```
+
 Python
 - fetching: using `os.getenv` 
 
@@ -8,10 +13,6 @@ Typescript
 Go
 - todo w. air or fresh
 
-aoc session
-```j
-$ export AOC_SESSION=...
-```
 
 <!------------ FOOTNOTE ------------>
 
