@@ -1,4 +1,4 @@
-aoc session
+Export session
 ```j
 $ export AOC_SESSION=...
 ```
