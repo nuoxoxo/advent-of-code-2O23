@@ -1,11 +1,12 @@
+aoc session
+- `$ export AOC_SESSION=...`
+
 Python
-- [x] boilerplate 
-- [x] fetching: using `os.getenv` 
+- fetching: using `os.getenv` 
 
 Ts
-- [x] boilerplate 
-- [x] HMR using Denon: run `denon start Filename.ts`
-- [x] non-watch mode: run `sh Deno.sh {1|2|...}`
+- HMR using Denon: run `denon start Filename.ts`
+- non-watch mode: run `sh Deno.sh {1|2|...}`
 
 <!--
 
