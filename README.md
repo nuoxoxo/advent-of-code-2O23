@@ -16,9 +16,20 @@ $ export AOC_SESSION=...
 <!------------ FOOTNOTE ------------>
 
 # &#8203;
+Install Deno
+```
+✗ curl -fsSL https://deno.land/x/install/install.sh | sh
+✗ which deno
+✗ export AOC_SESSION=abc123
+✗ printenv
+
+✗ deno run --allow-read --allow-env --allow-net template_deno.ts
+```
 Install Denon
 ```
 ✗ deno install --allow-read --allow-run -f https://deno.land/x/denon/denon.ts
+
+✗ denon start File.ts
 ```
 Write a denon.json
 ```
