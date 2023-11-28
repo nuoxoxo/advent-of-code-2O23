@@ -4,8 +4,8 @@ Python
 
 Ts
 - [x] boilerplate 
-- [x] HMR w/ Denon: run `denon start Filename.ts`
-- [x] cook w/ Deno: run `sh Deno.sh day{1|2|...}`
+- [x] HMR using Denon: run `denon start Filename.ts`
+- [x] non-watch mode: run `sh Deno.sh day{1|2|...}`
 
 <!--
 
