@@ -3,7 +3,7 @@ Python
 - [x] fetching: using `os.getenv` 
 
 Ts
-- [x] boilerplat 
+- [x] boilerplate 
 - [x] HMR w/ Denon: run `denon start Filename.ts`
 - [x] cook w/ Deno: run `sh Deno.sh day{1|2|...}`
 
