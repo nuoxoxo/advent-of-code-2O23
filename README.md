@@ -1,23 +1,23 @@
-Export session
+### Export session
 ```j
 $ export AOC_SESSION=...
 ```
 
-Python
+### Python
 - fetching: using `os.getenv` 
 
-Typescript
+### Typescript
 - HMR using Denon: run `denon start Filename.ts`
 - non-watch mode: run `sh Deno.sh {1|2|...}`
 
-Go
+### Go
 - todo w. air or fresh
 
 
 <!------------ FOOTNOTE ------------>
 
 # &#8203;
-Install Deno
+### Install Deno
 ```
 ✗ curl -fsSL https://deno.land/x/install/install.sh | sh
 ✗ which deno
