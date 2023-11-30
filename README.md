@@ -19,7 +19,7 @@ $ export AOC_SESSION=...
 ✗ which deno
 ✗ export AOC_SESSION=abc123
 ✗ printenv
-✗ deno run --allow-read --allow-env --allow-net template_deno.ts
+✗ deno run --allow-read --allow-env --allow-net File.ts
 ```
 Install Denon
 ```
