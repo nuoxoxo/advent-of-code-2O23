@@ -6,3 +6,5 @@
 !*.md
 !*.sh
 !Makefile
+init*
+p3*
