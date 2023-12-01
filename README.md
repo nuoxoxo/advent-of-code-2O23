@@ -1,3 +1,7 @@
+Day | :christmas_tree:
+:-: | :-
+1   | Parsing number words
+
 ### Export session
 ```j
 $ export AOC_SESSION=...
