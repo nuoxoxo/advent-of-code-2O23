@@ -19,7 +19,6 @@ lines.pop()
 r1 = 0
 r2 = 0
    
-aa = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 D = {'one' : 1, 'two' : 2, 'three':3, 'four':4, 'five':5, 'six':6, 'seven':7, 'eight':8, 'nine':9, '1':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '0':0}
 A = []
 for line in lines:
@@ -28,7 +27,7 @@ for line in lines:
     ss = int(s[0] + s[-1])
     r1 += ss
     temp = []
-    for w in aa:
+    for w in D:
         first = line.find(w)
         last = line.rfind(w)
         if (first != -1):
