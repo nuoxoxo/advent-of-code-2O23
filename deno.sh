@@ -1,9 +1,9 @@
 #!/bin/zsh
 
 if [ $1 -ge 0 ] && [ $1 -lt 10 ]; then
-    filename="aoc220$1_deno.ts"
+    filename="230$1.ts"
 elif [ $1 -ge 10 ] && [ $1 -lt 100 ]; then
-    filename="aoc22$1_deno.ts"
+    filename="23$1.ts"
 else
     echo "arg no good"
     exit 1
