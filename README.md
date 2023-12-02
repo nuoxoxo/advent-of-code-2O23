@@ -1,6 +1,6 @@
 Day | :christmas_tree:
 :-: | :-
-2   | Parsing + dict
+2   | Parsing + shouldve used defaultdict
 1   | Parsing number words
 
 <!------------ FOOTNOTE ------------>
