@@ -1,4 +1,4 @@
-Day | :christmas_tree:
+:christmas_tree:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :-
 3   | Find adjacent ints of a symbol '`*`'
 || must have used a wrong way for p1
