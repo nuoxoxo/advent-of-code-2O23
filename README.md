@@ -1,11 +1,11 @@
-:christmas_tree:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
-:-: | :-
-3   | Find adjacent integers of a '`*`'
-|| part 1: might have used a wrong way 
-|| edge case 1 : the end-of-row nums
-|| edge case 2 : identical nums around a '`*`'
-2   | Parsing + shouldve used defaultdict
-1   | Parsing number words
+:christmas_tree:|&#8302;|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
+:-: | :- | :-
+3   | Adjacent cells | Find adjacent integers of a '`*`'
+||| Part 1 : might have used a wrong way 
+||`edgecase 1`| those end-of-row numbers
+||`edgecase 2`| identical nums around a '`*`'
+2   | String segment | should've used defaultdict
+1   | Number words   | get number words
 
 <!------------ FOOTNOTE ------------>
 
