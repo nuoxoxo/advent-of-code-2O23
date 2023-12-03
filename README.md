@@ -1,5 +1,9 @@
 Day | :christmas_tree:
 :-: | :-
+3   | Find adjacent ints of a symbol '`*`'
+|| must have used a wrong way for p1
+|| edge case 1 : num at the end of row 
+|| edge case 2 : duplicated nums around a '`*`'
 2   | Parsing + shouldve used defaultdict
 1   | Parsing number words
 
