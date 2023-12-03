@@ -1,4 +1,4 @@
-:christmas_tree:|&#8302;|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
+:christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
 3   | Adjacent cells | Find adjacent integers of a '`*`'
 ||| Part 1 : might have used a wrong way 
