@@ -1,6 +1,6 @@
 :christmas_tree:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :-
-3   | Find adjacent ints of a symbol '`*`'
+3   | Find adjacent integers of a '`*`'
 || part 1: might have used a wrong way 
 || edge case 1 : the end-of-row nums
 || edge case 2 : identical nums around a '`*`'
