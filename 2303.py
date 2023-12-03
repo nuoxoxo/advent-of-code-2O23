@@ -46,13 +46,14 @@ for r in range(R):
                 lp = list(pset)
                 r2 += lp[0][4] * lp[1][4]
         ## p1 
-        if not ch.isdigit() and ch != '.':
-            for rr in range(r - 1, r + 2):
-                for cc in range(c - 1, c + 2):
-                    if -1<rr<R and -1<cc<C:
-                        for t in T:
-                            if t[0][0] == [rr, cc] or t[0][1] == [rr, cc]:
-                                t[2] = True
+        if ch.isdigit() or ch == '.':
+            continue
+        for rr in range(r - 1, r + 2):
+            for cc in range(c - 1, c + 2):
+                if -1<rr<R and -1<cc<C:
+                    for t in T:
+                        if t[0][0] == [rr, cc] or t[0][1] == [rr, cc]:
+                            t[2] = True
 r1 += sum(t[1] if t[2] else 0 for t in T)
 print("part 1:", r1)
 print("part 2:", r2)
