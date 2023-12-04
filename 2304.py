@@ -19,12 +19,15 @@ for L, R in A:
         if l in R:
             w += 1
     r1 += int(2 ** (w-1))
+    ### part 2 bug
+    """
     end = min(S, idx+w+1)
     for i in range(idx, end):#, w+bound):
         if not idx in D:
             D[idx] = [w, [i]]
         else:
             D[idx][1].append(i)
+    """
     d[idx]+=1
     for i in range(1,w+1):
         d[idx+i] += d[idx]
