@@ -13,6 +13,7 @@ with open('04.' + str(F)) as file:
 #S=len(A)
 idx=1
 for L, R in A:
+    ### part 1
     #print(L,R)
     w = 0
     for l in L:
@@ -28,6 +29,7 @@ for L, R in A:
         else:
             D[idx][1].append(i)
     """
+    ### part 2 
     d[idx]+=1
     for i in range(1,w+1):
         d[idx+i] += d[idx]
