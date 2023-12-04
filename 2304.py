@@ -10,7 +10,7 @@ with open('04.' + str(F)) as file:
         L=[int(_)for _ in line[0].split()]
         R=[int(_)for _ in line[1].split()]
         A.append([L,R])
-S=len(A)
+#S=len(A)
 idx=1
 for L, R in A:
     #print(L,R)
