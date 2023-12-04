@@ -26,8 +26,8 @@ for L, R in A:
         else:
             D[idx][1].append(i)
     d[idx]+=1
-    for i in range(w):
-        d[idx+1+i] += d[idx]
+    for i in range(1,w+1):
+        d[idx+i] += d[idx]
     idx+= 1
 for _, v in d.items():r2+=v
 print("part 1:", r1)
