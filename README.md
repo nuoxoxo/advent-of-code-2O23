@@ -2,10 +2,10 @@
 :-: | :- | :-
 3   | Mathy part 2   | each added win += pts of parent that wins
 ||| Improv. : using intersection of sets
-3   | Adjacent cells | Find adj ints around a '`*`'
+3   | Adjacent cells | Find ints around a '`*`'
 ||| Part 1 : might have used a wrong way 
-||`edgecase 1`| those end-of-row numbers
-||`edgecase 2`| identical nums around a '`*`'
+|||`edgecase 1` end-of-row numbers
+|||`edgecase 2` identical nums in 3x3
 2   | String segment | should've used defaultdict
 1   | Number words   | get number words
 
