@@ -1,8 +1,8 @@
-from collections import defaultdict 
 F = 0
+from collections import defaultdict 
 r1, r2 = 0, 0
 A=[]
-D={}
+#D={}
 d=defaultdict(int)
 with open('04.' + str(F)) as file:
     for line in file:
