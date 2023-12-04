@@ -1,7 +1,6 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-4   | Mathy part 2   | each added win += pts of parent that wins
-||| Improv. : using intersection of sets
+4   | Mathy part 2   | each subseq win += pts of parent that wins
 3   | Adjacent cells | Find ints around a '`*`'
 ||| Part 1 : might have used a wrong way 
 |||`edgecase 1` end-of-row numbers
