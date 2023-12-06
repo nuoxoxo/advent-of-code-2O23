@@ -3,7 +3,6 @@
 6   | Quadratic equation| A simple lucky day
 5   | Interval          | Track seed w/in a interval ~~range~~
 ||| instead of tracing every individual one
-||| p2: ___todo___
 4   | Mathy part 2      | each subseq win += pts of parent that wins
 3   | Adjacent cells    | Find ints around a '`*`'
 ||| Part 1 : might have used a wrong way 
