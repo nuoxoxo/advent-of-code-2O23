@@ -1,7 +1,7 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-6   | Normal regression?| A simple lucky day
-5   | Interval          | Track seed w/in a range
+6   | Quadratic equation| A simple lucky day
+5   | Interval          | Track seed w/in a interval ~~range~~
 ||| instead of tracing every individual one
 ||| p2: ___todo___
 4   | Mathy part 2      | each subseq win += pts of parent that wins
