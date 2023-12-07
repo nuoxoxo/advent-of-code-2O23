@@ -1,7 +1,8 @@
 F = 0
 import functools, re
 from collections import Counter
-### 251473971 . 252357948 too lo .. 252348193 x
+### p1 - 251473971 . 252357948 too lo .. 252348193 x
+### p2 - 253656707 . 253659703 too lo
 r1, r2 = 0, 0
 A=[]
 with open('07.' + str(F)) as file:
