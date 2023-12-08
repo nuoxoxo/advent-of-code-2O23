@@ -1,5 +1,7 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
+8   | Math              | Lcm & Gcd
+7   | Smart ways        | to deal w/ a wild card
 6   | Quadratic equation| A simple lucky day
 5   | Interval          | Track seed w/in a interval ~~range~~
 ||| instead of tracing every individual one
