@@ -1,5 +1,5 @@
 F = 0
-# 2084338078790969416800 : hi
+# 56922302683x . 2084338078790969416800 : hi
 import math
 r1, r2 = 0, 0
 A,P=[],''
@@ -10,32 +10,39 @@ with open('08.' + str(F)) as file:
         if line == '':ok=True
         elif not ok:P=line
         else:A.append(line)
+L,R={},{}
 D,counter={},{}#defaultdict(str)#{}
-pl= len(P)
-t,L,R=0,'L','R'
+plen= len(P)
+t = 0
 for a in A:
     node, tmp = a.split('=')
-    l,r=tmp.split(', ')
-    node,l,r=node[:-1], l[2:], r[:-1]
+    l,r = tmp.split(', ')
+    node,l,r = node[:-1], l[2:], r[:-1]
     print(node,'>',l,r)
-    if L not in D:D[L]={}
-    if R not in D:D[R]={}
-    D[L][node],D[R][node] = l,r
-
+    """if 'L' not in D:
+        D['L']={}
+    if 'R' not in D:
+        D['R']={}"""
+    L[node],R[node] = l,r
 #print('P:',P)
 #for a in A:print(a)
 
 # part 1
 node = 'AAA'
 while not node == 'ZZZ':
-    node = D[ P[t % pl]][node]
+    DIR = P[t % plen]
+    if DIR == 'L':
+        node = L[node]
+    else:
+        node = R[node]
     t += 1
 r1 = t
 
 # part 2
-A = []#since we have D
-for node in D[L]:
-    if node[-1] == 'A':A.append(node)
+A = []
+for node in L: # L and R have same set of Keys
+    if node[-1] == 'A':
+        A.append(node)
 t = 0
 Rec = []
 while 1:
@@ -43,9 +50,13 @@ while 1:
     found = False
     for i in range(len(A)):
         node = A[i]
-        node = D[ P[t % pl] ][node]
+        DIR = P[t % plen]
+        if DIR == 'L':
+            node = L[node]
+        else:
+            node = R[node]
         if node[-1] == 'Z':
-            counter[i] = t + 1 
+            counter[i] = t + 1
             if len(counter) == len(A):
                 found = True
                 tmp = [v for k,v in counter.items()]
