@@ -6,4 +6,4 @@
 !*.md
 !*.sh
 !Makefile
-!gots
+!*got*
