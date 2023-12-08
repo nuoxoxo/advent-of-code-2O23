@@ -1,14 +1,14 @@
 F = 0
-import functools, re
+import functools
 from collections import Counter
-### 251473971 . 252357948 too lo .. 252348193 x
+### 251473971 . 252357948 too lo .. 252348193 x -- p1
+### 247693206 . 252075685 too lo .. 255266595 too hi . 254469345 . 254457089 - part 2
 r1, r2 = 0, 0
 A,E=[],[]
 with open('07.' + str(F)) as file:
     for line in file:
         line=line.strip().split()
         L,R = line[0],line[1]
-        E.append((L,R))
         L = L.replace('A','|')\
             .replace('K','_')\
             .replace('Q','^')\
@@ -39,9 +39,10 @@ with open('07.' + str(F)) as file:
         line[1] = int(R)
         line.append(paircount)
         A.append(line)
+        E.append([line[0], int(R)])
 
-def dbg(A):
-    for a in A:print(a)
+def dbg(thing):
+    for n in thing:print(n)
 
 def cmp(ll, rr):
     l,r=ll[0],rr[0]
@@ -56,11 +57,56 @@ def cmp(ll, rr):
     elif c1 < c2: return -1
     return 0
     """
+cardtypes = [']', '2', '3', '4', '5', '6', '7', '8', '9', '[', '^', '_', '|']
+def cmp2(ll, rr):
+    # to make: best possible hand
+    l, r = ll[0], rr[0] # original pair to cmp
+    Jall, L, R = ']]]]]', '', '' # ]]]]] ---> 5xJ
+    if l == Jall:
+        L = '|||||' # ||||| ---> 5xA
+    else:
+        L = ll[0].replace(']', '')
+    if rr[0] == Jall:
+        R = '|||||'
+    else:
+        R = rr[0].replace(']', '')
+    pair = [L, R]
+    LR = []
+    for hand in pair:
+        ln = len(set(hand))
+        counter = Counter(hand)
+        findmost = counter.most_common()
+        LR.append(findmost[0][1] - ln)
+    maxL, maxR = LR
+    if ']' in l and l != Jall:
+        maxL += l.count(']')
+    if ']' in r and r != Jall:
+        maxR += r.count(']')
+    if maxL < maxR:return -1
+    if maxL > maxR:return 1
+    # same power
+    for i in range(5):
+        c1 = cardtypes.index(l[i])
+        c2 = cardtypes.index(r[i])
+        if c1 < c2:return -1
+        if c1 > c2:return 1
+    return 0
+
+
 A.sort(key=functools.cmp_to_key(cmp))
 for i in range(len(A)): r1 += A[i][1] * (i + 1)
-dbg(E)#A)
-print('part 1:', r1)
+#dbg(E)#A)
 
+E.sort(key=functools.cmp_to_key(cmp2))
+for i in range(len(E)): r2 += E[i][1] * (i + 1)
+dbg(E)#A)
+
+print('part 1:', r1)
+print('part 2:', r2)
+
+exit()
+
+# ----------------------------#
 # part 2 - deprecated
 cardtypes=[] # fill with all card types
 BB,B=A.copy(),[] # for part 2
@@ -92,3 +138,4 @@ for i in range(len(B)):
     r2 += B[i][1] * (i+1)
 print(r1,r2)
 """
+
