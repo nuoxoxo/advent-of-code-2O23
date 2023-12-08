@@ -11,9 +11,9 @@ with open('08.' + str(F)) as file:
         elif not ok:P=line
         else:A.append(line)
 L,R={},{}
-D,counter={},{}#defaultdict(str)#{}
+D={}#,counter={},{}#defaultdict(str)#{}
+t=0
 plen= len(P)
-t = 0
 for a in A:
     node, tmp = a.split('=')
     l,r = tmp.split(', ')
@@ -40,6 +40,7 @@ r1 = t
 
 # part 2
 A = []
+counter = {}
 for node in L: # L and R have same set of Keys
     if node[-1] == 'A':
         A.append(node)
@@ -57,11 +58,13 @@ while 1:
             node = R[node]
         if node[-1] == 'Z':
             counter[i] = t + 1
-            if len(counter) == len(A):
+            if len(counter) == len(A): # all the A paths have been completed
                 found = True
                 tmp = [v for k,v in counter.items()]
                 res = 1
-                for v in tmp:res = (v * res) // math.gcd(v, res)
+                for v in tmp:
+                    gcd = math.gcd(res, v)
+                    res = res * v // gcd
                 Rec, r2 = tmp, res
                 break
         if found:break
