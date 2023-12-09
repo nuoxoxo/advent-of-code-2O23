@@ -20,7 +20,7 @@ get_stuff(day).then((infile) => {
     for (let line of lines) {
         let a: number[][] = [line.split(' ').map(Number)]
         a = expl(a)
-        for (const aa of a) {
+        for (let aa of a) {
             r1 += aa[aa.length - 1]
         }
         let tmp = 0
