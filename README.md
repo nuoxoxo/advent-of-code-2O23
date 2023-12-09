@@ -1,5 +1,6 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
+9   | Sim               | Brute force simulation
 8   | Math              | Lcm & Gcd
 7   | _Trying a smarter way to redo this one_ | to deal w/ a wild card
 6   | Quadratic equation| A simple lucky day
