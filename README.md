@@ -15,6 +15,8 @@
 2   | String segment    | Should've used defaultdict
 1   | Number words      | Get number words
 
+&#8203;
+
 ![](https://i.imgur.com/xbrhMMC.png)
 
 <!------------ FOOTNOTE ------------>
