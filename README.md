@@ -1,6 +1,7 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-10  | Path Graph        | no idea for part 2
+10  | Path Graph        | no idea for part 2 
+||| polygon principle . to retry
 9   | Sim               | Brute force simulation
 8   | Math              | Lcm & Gcd
 7   | _Trying a smarter way to redo this one_ | Deal w/ a wild card
