@@ -3,10 +3,10 @@
 12  | Permutation + Wildcards | Learn lru_cache
 11  | Pairs in Grid     | Store only relevent coordinates 
 10  | Path in Graph     | no idea for part 2 
-||| polygon principle . to retry
-9   | Sim               | Brute force simulation
+||| p2 : inside-a-polygon principle 
+9   | Brute force simulation
 8   | Math              | Lcm & Gcd
-7   | Poker + Wildcards | Finding a smarter way
+7   | Poker + Wildcards 
 6   | Quadratic equation| A simple lucky day
 5   | Interval          | Track seed w/in a interval ~~range~~
 ||| instead of tracing every individual one
