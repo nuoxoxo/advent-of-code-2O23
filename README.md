@@ -15,7 +15,7 @@
 ||| Part 1 : might have used a wrong way 
 |||`edgecase 1` end-of-row numbers
 |||`edgecase 2` identical nums in 3x3
-2   | String segment    | Should've used defaultdict
+2   | String segment    | Parse those strings
 1   | Number words      | Get number words
 
 >  [thread]: Also skoh, with the other problems you could create a map of the problem and then use that map to solve the problem. Here it's so big that you have to compare distances, instead of checking if the map at certain coordinates contains a certain character. This is what makes it harder - _Adringar 15/12/22_
