@@ -1,21 +1,21 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-11  | Pairs in Grid     | Store all points involved 
-10  | Path in Graph     | no idea for part 2 
-||| polygon principle . to retry
-9   | Sim               | Brute force simulation
-8   | Math              | Lcm & Gcd
-7   | _Trying a smarter way to redo this one_ | Deal w/ a wild card
-6   | Quadratic equation| A simple lucky day
-5   | Interval          | Track seed w/in a interval ~~range~~
-||| instead of tracing every individual one
-4   | Mathy part 2      | Each subseq win += pts of parent that wins
-3   | Adjacent cells    | Find ints around a '`*`'
-||| Part 1 : might have used a wrong way 
+12  | Nonogram Permutation + Wildcards | ① DFS ② Iterative
+11  | `n(n-1)/2` Pairing               | Keep only relevent coordinates 
+10  | Graph                            | BFS + inside-a-polygon principle 
+9   | Brute Sim
+8   | Iterate until it stops           | Lcm 
+7   | Poker + Wildcards 
+6   | Quadratic equation               | A simple lucky day
+5   | Overlapping Intervals            | `_` bound 1 `_` bound 2 `_`
+||| 1 = max(curr & next L) 
+||| 2 = min(curr & next R) 
+4   | Math                             | Each subseq win += pts of parent that wins
+3   | Adjacent cells                   | Find ints around a '`*`'
 |||`edgecase 1` end-of-row numbers
 |||`edgecase 2` identical nums in 3x3
-2   | String segment    | Should've used defaultdict
-1   | Number words      | Get number words
+2   | String segment                   | Parse those strings
+1   | Number words                     | Get number words
 
 >  [thread]: Also skoh, with the other problems you could create a map of the problem and then use that map to solve the problem. Here it's so big that you have to compare distances, instead of checking if the map at certain coordinates contains a certain character. This is what makes it harder - _Adringar 15/12/22_
 
