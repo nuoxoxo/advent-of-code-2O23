@@ -3,10 +3,10 @@
 12  | 1D Nonogram + wildcards          | DFS + Permutation w/ rules
 11  | n(n-1)/2 Pairing                 | Keep only relevent coordinates 
 10  | Graph                            | BFS + inside-a-polygon principle 
-9   | Bruteforce  Sim                  | Keep appending rows until row is all 0
+9   | Bruteforce  Sim                  | Append rows until row is all 0
 8   | Iterate until it stops           | Lcm + and it will stop
 7   | Poker + wildcards                | Sorting w/ custiom comparator
-6   | Quadratic equation               | Simply do linear adding 
+6   | Quadratic equation               | Simply linear adding 
 5   | Overlapping Intervals            | (1) `\|` (2) `\|` (3) 
 ||| left bound = max(curr & next L) 
 ||| right bound = min(curr & next R) 
