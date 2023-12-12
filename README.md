@@ -7,7 +7,7 @@
 8   | Iterate until it stops | Lcm 
 7   | Poker + Wildcards 
 6   | Quadratic equation| A simple lucky day
-5   | Overlapping Intervals | ` ` bound 1 ` ` bound 2 ` `
+5   | Overlapping Intervals | `_` bound 1 `_` bound 2 `_`
 ||| 1 = max(curr & next L) 
 ||| 2 = min(curr & next R) 
 4   | Math              | Each subseq win += pts of parent that wins
