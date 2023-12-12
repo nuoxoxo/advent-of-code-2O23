@@ -7,9 +7,9 @@
 8   | Iterate until it stops           | Lcm + and it will stop
 7   | Poker + wildcards                | Sorting w/ custiom comparator
 6   | Quadratic equation               | Simply do linear adding 
-5   | Overlapping Intervals            | Lot L `1` Lot Mid `2` Lot R
-||| 1 = max(curr & next L) 
-||| 2 = min(curr & next R) 
+5   | Overlapping Intervals            | (1) `|` (2) `|` (3) 
+||| left bound = max(curr & next L) 
+||| right bound = min(curr & next R) 
 4   | Math                             | Each child-win gains pts of parent that wins 
 3   | Adjacent cells                   | Find ints around a '`*`'
 |||`edgecase 1` end-of-row numbers
