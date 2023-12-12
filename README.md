@@ -1,21 +1,21 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-12  | Permutation + Wildcards | DFS + lru_cache
-11  | `n(n-1)/2` Pairing | Keep only relevent coordinates 
-10  | Graph             | BFS + inside-a-polygon principle 
+12  | Nonogram Permutation + Wildcards | DFS + lru_cache
+11  | `n(n-1)/2` Pairing               | Keep only relevent coordinates 
+10  | Graph                            | BFS + inside-a-polygon principle 
 9   | Brute Sim
-8   | Iterate until it stops | Lcm 
+8   | Iterate until it stops           | Lcm 
 7   | Poker + Wildcards 
-6   | Quadratic equation| A simple lucky day
-5   | Overlapping Intervals | `_` bound 1 `_` bound 2 `_`
+6   | Quadratic equation               | A simple lucky day
+5   | Overlapping Intervals            | `_` bound 1 `_` bound 2 `_`
 ||| 1 = max(curr & next L) 
 ||| 2 = min(curr & next R) 
-4   | Math              | Each subseq win += pts of parent that wins
-3   | Adjacent cells    | Find ints around a '`*`'
+4   | Math                             | Each subseq win += pts of parent that wins
+3   | Adjacent cells                   | Find ints around a '`*`'
 |||`edgecase 1` end-of-row numbers
 |||`edgecase 2` identical nums in 3x3
-2   | String segment    | Parse those strings
-1   | Number words      | Get number words
+2   | String segment                   | Parse those strings
+1   | Number words                     | Get number words
 
 >  [thread]: Also skoh, with the other problems you could create a map of the problem and then use that map to solve the problem. Here it's so big that you have to compare distances, instead of checking if the map at certain coordinates contains a certain character. This is what makes it harder - _Adringar 15/12/22_
 
