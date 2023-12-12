@@ -1,7 +1,7 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
 12  | Permutation + Wildcards | Learn lru_cache
-11  | Pairs in Grid     | Store only relevent coordinates 
+11  | `n(n-1)/2` Pairing | Store only relevent coordinates 
 10  | Path in Graph     | no idea for part 2 
 ||| p2 : inside-a-polygon principle 
 9   | Brute force simulation
