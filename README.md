@@ -1,6 +1,6 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-12  | Nonogram Permutation + Wildcards | DFS + lru_cache
+12  | Nonogram Permutation + Wildcards | ① DFS ② Iterative
 11  | `n(n-1)/2` Pairing               | Keep only relevent coordinates 
 10  | Graph                            | BFS + inside-a-polygon principle 
 9   | Brute Sim
