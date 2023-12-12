@@ -3,7 +3,7 @@
 12  | Permutation + Wildcards | DFS + lru_cache
 11  | `n(n-1)/2` Pairing | Keep only relevent coordinates 
 10  | Graph             | BFS + inside-a-polygon principle 
-9   | Brute force simulation
+9   | Brute Sim
 8   | Iterate until it stops | Lcm 
 7   | Poker + Wildcards 
 6   | Quadratic equation| A simple lucky day
