@@ -12,7 +12,6 @@
 ||| 2 = min(curr & next R) 
 4   | Mathy part 2      | Each subseq win += pts of parent that wins
 3   | Adjacent cells    | Find ints around a '`*`'
-||| Part 1 : might have used a wrong way 
 |||`edgecase 1` end-of-row numbers
 |||`edgecase 2` identical nums in 3x3
 2   | String segment    | Parse those strings
