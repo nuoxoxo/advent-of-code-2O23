@@ -1,13 +1,13 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
 12  | 1D Nonogram + Wildcards          | DFS + Permutation w/ rules
-11  | n(n-1)/2 Pairing               | Keep only relevent coordinates 
+11  | n(n-1)/2 Pairing                 | Keep only relevent coordinates 
 10  | Graph                            | BFS + inside-a-polygon principle 
 9   | Brute Sim
 8   | Iterate until it stops           | Lcm 
 7   | Poker + Wildcards 
 6   | Quadratic equation               | A simple lucky day
-5   | Overlapping Intervals            | `_` bound 1 `_` bound 2 `_`
+5   | Overlapping Intervals            | Lot L `1` Lot Mid `2` Lot R
 ||| 1 = max(curr & next L) 
 ||| 2 = min(curr & next R) 
 4   | Math                             | Each subseq win += pts of parent that wins
