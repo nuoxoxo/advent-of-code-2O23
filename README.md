@@ -5,7 +5,7 @@
 10  | Graph                            | BFS + inside-a-polygon principle 
 9   | Brute Sim                        |
 8   | Iterate until it stops           | Lcm 
-7   | Poker + wildcards                |
+7   | Poker + wildcards                | Sorting w/ custiom comparator
 6   | Quadratic equation               | 
 5   | Overlapping Intervals            | Lot L `1` Lot Mid `2` Lot R
 ||| 1 = max(curr & next L) 
