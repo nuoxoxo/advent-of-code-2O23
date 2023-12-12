@@ -19,11 +19,11 @@ const DFS = (line:string, resource:number[]) => {
     if (resource.length) {
       return 0
     }
-    console.log('validated:', `"${line}"`)
+    /*console.log('validated:', `"${line}"`)
     console.log('next rsce:',
       ! resource || resource.length < 1 ? [] : resource[0] + 
       `(in queue: ${resource.length - 1} other resources)`, '\n')
-    return 1
+    */return 1
   }
   if (line[0] === '?') {
     let OP = '.' + line.substring(1)
@@ -51,11 +51,11 @@ const DFS = (line:string, resource:number[]) => {
       if (line[next_resource] === '#') {
         return 0
       }
-      console.log('will goto:', `"${line}"`)
+      /*console.log('will goto:', `"${line}"`)
       console.log('next rsce:',
         ! resource || resource.length < 1 ? [] : resource[0] + 
         ` (in queue: ${resource.length - 1} other resources)`, '\n')
-      return DFS(line.substring(next_resource + 1), resource.slice(1))
+      */return DFS(line.substring(next_resource + 1), resource.slice(1))
     }
   }
   if (line[0] === '.') {
@@ -71,12 +71,17 @@ get_stuff(day).then((infile) => {
   for (let line of lines) {
     let [L, temp] = line.split(' ')
     let R = temp.split(',').map(Number)
-    console.log(L, R)
     r1 += DFS(L, R)
+
+    L = ((L + '?').repeat(5)).slice(0, -1)
+    R = Array.from({ length: 5 }, () => [...R]).flat()
+    //r2 += DFS(L, R)
+    console.log(r1, r2)
+
   }
 
   console.log("part 1:", r1)
-  console.log("part 2:", r2)
+  console.log("part 2:", r2, '(pending)')
 
 }).catch((err) => { throw err })
 
