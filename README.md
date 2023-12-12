@@ -6,7 +6,7 @@
 9   | Brute Sim                        |
 8   | Iterate until it stops           | Lcm 
 7   | Poker + wildcards                | Sorting w/ custiom comparator
-6   | Quadratic equation               | Simply do linearly adding 
+6   | Quadratic equation               | Simply do linear adding 
 5   | Overlapping Intervals            | Lot L `1` Lot Mid `2` Lot R
 ||| 1 = max(curr & next L) 
 ||| 2 = min(curr & next R) 
