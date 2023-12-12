@@ -10,7 +10,7 @@
 5   | Overlapping Intervals            | Lot L `1` Lot Mid `2` Lot R
 ||| 1 = max(curr & next L) 
 ||| 2 = min(curr & next R) 
-4   | Math                             | Each subseq win += pts of parent that wins
+4   | Math                             | Each child-win gains pts of parent that wins 
 3   | Adjacent cells                   | Find ints around a '`*`'
 |||`edgecase 1` end-of-row numbers
 |||`edgecase 2` identical nums in 3x3
