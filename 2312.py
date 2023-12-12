@@ -1,4 +1,4 @@
-F=1
+F=0
 r1, r2 = 0, 0 #None
 A=[]
 with open('12.' + str(F)) as file:
@@ -15,11 +15,11 @@ with open('12.' + str(F)) as file:
 # - ?###???????? 3,2,1 - 10 arrangements
 from functools import lru_cache
 @lru_cache(maxsize=None)
-def DFS(line, resource):
+def DFS(line, resource, pt=None):
     if not line or all(_ == '.' for _ in line):
         if resource:
             return 0 # line ends prematurely but still resources to consider
-        print('validated:', line, resource)
+        print(pt, 'validated:', line, resource)
         return 1 # only valid case: IIF line is '' or '....' and no resources left
     if line[0] == '?': # Wildcard: to consider both possibilities
         OP = '.' + line[1:]
@@ -28,7 +28,7 @@ def DFS(line, resource):
         DM = '#' + line[1:]
         # '?.#' >> '#.#' -1)
         #       >> '..#' -2)
-        return DFS(OP, resource) + DFS(DM, resource)
+        return DFS(OP, resource, pt) + DFS(DM, resource, pt)
     if line[0] == '#':
         if not resource:
             return 0 # not enough resources but still some # left
@@ -46,20 +46,20 @@ def DFS(line, resource):
                 return 0 # not enough land for resources even after rcs used
             if line[rcs] == '#':
                 return 0 # if enough land, a separator ('.') is needed 
-            print('move next:', line, resource)
-            return DFS(line[rcs + 1:], resource[1:]) # mv to next and next is not nul
+            print(pt, 'move next:', line, resource)
+            return DFS(line[rcs + 1:], resource[1:], pt) # mv to next and next is not nul
             # case is '##.?..' [2,1]
             # will be   '.?..' [1]
     if line[0] == '.':
-        return DFS(line[1:], resource) # mv to next validation a non-dot-filled line
+        return DFS(line[1:], resource, pt) # mv to next validation a non-dot-filled line
 
 for line, resource in A:
     resource = tuple(resource)
-    r1 += DFS(line, resource)
+    r1 += DFS(line, resource, 1)
     # print('part 1:', r1)
 for line, resource in A:
     resource = tuple(resource)
-    r2 += DFS(((line + "?") * 5)[:-1], resource * 5)
+    r2 += DFS(((line + "?") * 5)[:-1], resource * 5, 2)
     # print('part 2:', r2)
 print('part 1:', r1, '- final')
 print('part 2:', r2, '- final')
