@@ -1,21 +1,21 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-11  | Pairs in Grid     | Store all points involved 
-10  | Path in Graph     | no idea for part 2 
-||| polygon principle . to retry
-9   | Sim               | Brute force simulation
-8   | Math              | Lcm & Gcd
-7   | _Trying a smarter way to redo this one_ | Deal w/ a wild card
-6   | Quadratic equation| A simple lucky day
-5   | Interval          | Track seed w/in a interval ~~range~~
-||| instead of tracing every individual one
-4   | Mathy part 2      | Each subseq win += pts of parent that wins
-3   | Adjacent cells    | Find ints around a '`*`'
-||| Part 1 : might have used a wrong way 
+12  | Wildcard + 1D Nonogram           | DFS + Permutation w/ rules
+11  | n(n-1)/2 Pairing                 | Keep only relevent coordinates 
+10  | Graph                            | BFS + inside-a-polygon principle 
+9   | Bruteforce  Sim                  | Append rows until row is all 0
+8   | Iterate until it stops           | Lcm + and it will stop
+7   | Wildcards + Poker                | Sorting w/ custiom comparator
+6   | Quadratic equation               | Simply linear adding 
+5   | Overlapping Intervals            | (1) `\|` (2) `\|` (3) 
+||| left bound = max(curr & next L) 
+||| right bound = min(curr & next R) 
+4   | Math                             | Each child-win gains pts of parent that wins 
+3   | Adjacent cells                   | Find ints around a '`*`'
 |||`edgecase 1` end-of-row numbers
 |||`edgecase 2` identical nums in 3x3
-2   | String segment    | Should've used defaultdict
-1   | Number words      | Get number words
+2   | String segment                   | Parse those strings
+1   | Number words                     | Get number words
 
 >  [thread]: Also skoh, with the other problems you could create a map of the problem and then use that map to solve the problem. Here it's so big that you have to compare distances, instead of checking if the map at certain coordinates contains a certain character. This is what makes it harder - _Adringar 15/12/22_
 
