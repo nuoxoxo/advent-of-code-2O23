@@ -1,11 +1,12 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
+12  | Permutation w/ Wildcards | Learn lru_cache
 11  | Pairs in Grid     | Store all points involved 
 10  | Path in Graph     | no idea for part 2 
 ||| polygon principle . to retry
 9   | Sim               | Brute force simulation
 8   | Math              | Lcm & Gcd
-7   | _Trying a smarter way to redo this one_ | Deal w/ a wild card
+7   | Poker sim w/ Wildcards | Finding a smarter way
 6   | Quadratic equation| A simple lucky day
 5   | Interval          | Track seed w/in a interval ~~range~~
 ||| instead of tracing every individual one
