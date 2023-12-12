@@ -3,10 +3,10 @@
 12  | 1D Nonogram + wildcards          | DFS + Permutation w/ rules
 11  | n(n-1)/2 Pairing                 | Keep only relevent coordinates 
 10  | Graph                            | BFS + inside-a-polygon principle 
-9   | Brute Sim
+9   | Brute Sim                        |
 8   | Iterate until it stops           | Lcm 
-7   | Poker + wildcards 
-6   | Quadratic equation               | A simple lucky day
+7   | Poker + wildcards                |
+6   | Quadratic equation               | 
 5   | Overlapping Intervals            | Lot L `1` Lot Mid `2` Lot R
 ||| 1 = max(curr & next L) 
 ||| 2 = min(curr & next R) 
