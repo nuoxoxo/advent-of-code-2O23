@@ -7,8 +7,9 @@
 8   | Iterate until it stops | Lcm 
 7   | Poker + Wildcards 
 6   | Quadratic equation| A simple lucky day
-5   | Overlapping Intervals | `≈`max(lefts) `≈` min(rights) `≈`
-||| instead of tracing every individual one
+5   | Overlapping Intervals | `≈` `1` `≈` `2` `≈`
+||| Bound 1 = max(curr L, next L) 
+||| Bound 2 = min(curr R, next R) 
 4   | Mathy part 2      | Each subseq win += pts of parent that wins
 3   | Adjacent cells    | Find ints around a '`*`'
 ||| Part 1 : might have used a wrong way 
