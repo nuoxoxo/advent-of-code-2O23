@@ -1,5 +1,6 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
+13  | Wildcard + 2D Transpose          | Wildcard again this time no guessing needed
 12  | Wildcard + 1D Nonogram           | DFS + Permutation w/ rules
 11  | n(n-1)/2 Pairing                 | Keep only relevent coordinates 
 10  | Graph                            | BFS + inside-a-polygon principle 
@@ -10,12 +11,12 @@
 5   | Overlapping Intervals            | (1) `\|` (2) `\|` (3) 
 ||| left bound = max(curr & next L) 
 ||| right bound = min(curr & next R) 
-4   | Math                             | Each child-win gains pts of parent that wins 
-3   | Adjacent cells                   | Find ints around a '`*`'
+4   | Math                             | Each child win gains pts of parent that wins 
+3   | Parsing Ints in djacent cells    |
 |||`edgecase 1` end-of-row numbers
 |||`edgecase 2` identical nums in 3x3
-2   | String segment                   | Parse those strings
-1   | Number words                     | Get number words
+2   | Parsing String segment           | 
+1   | Parsing Number words             | 
 
 >  [thread]: Also skoh, with the other problems you could create a map of the problem and then use that map to solve the problem. Here it's so big that you have to compare distances, instead of checking if the map at certain coordinates contains a certain character. This is what makes it harder - _Adringar 15/12/22_
 
