@@ -1,33 +1,28 @@
-F = 0 # 30677
-from collections import defaultdict 
+F = 0
 r1, r2 = 0, 0
-A,B,sds=[],[],[]
-D=[]
+A = []
+def dbg(T):
+    for t in T:print(t)
 with open('13.' + str(F)) as file:
-    t1,t2 = [],[]
+    temp = []
     for line in file:
         line=line.strip()
         if not line:
-            A.append(t1)
-            B.append(t2)
-            t1,t2=[],[]
+            A.append(temp)
+            temp = []
         else:
-            t1.append([_ for _ in line])
-            t2.append(line)
-    if t1: A.append(t1)
-    if t2: B.append(t2)
-for a in A: print(a)
-for b in B: print(b)
-idx = 0
-for b in B:
-    idx+=1
+            temp.append([_ for _ in line])
+    if temp:
+        A.append(temp)
+# dbg(A)
+for line in A:
     H=False
-    for i in range(1, len(b)):# - 1):
-        if b[i] == b[i-1]:
+    for i in range(1, len(line)):
+        if line[i] == line[i - 1]:
             check = True
-            u, d = i-1, i
-            while u > -1 and d < len(b):
-                if b[u] != b[d]:
+            u, d = i - 1, i
+            while u > -1 and d < len(line):
+                if line[u] != line[d]:
                     check = False
                     break
                 u -= 1
@@ -36,32 +31,24 @@ for b in B:
                 H=True
                 r1 += i * 100
                 break
+
     ### part 2 (HRZ)
-    for i in range(1, len(b)):
-        p2=0
-        u, d = i-1, i
-        while u > -1 and d < len(b):
-            for uu,dd in zip([_ for _ in b[u]],[_ for _ in b[d]]):
-                if uu != dd:
-                    print('uu,dd',uu,dd,[_ for _ in b[u]],[_ for _ in b[d]])
+
+    for i in range(1, len(line)):
+        p2 = 0
+        u, d = i - 1, i
+        while u > -1 and d < len(line):
+            for U, D in zip(line[u], line[d]):
+                if U != D:
                     p2+=1
-            """
-            if b[u] != b[d]:
-                p2 += 1
-            """
             u -= 1
             d += 1
         if p2 == 1:
             r2 += (i) * 100
-            print('HRZ p2:', 'row', i, b[i-1],b[i])
-            #break
-
-    # print('hori' if H else ' - vert', r2)
-    # if H:continue
-
-    tp = list(list(_) for _ in zip(*b)) # transpose 
-    # for line in tp: print(line)
-    for i in range(1, len(tp)):# - 1):
+            print('HRZ p2:', 'row', i, '\n',''.join(line[i-1]),'\n',''.join(line[i]),'\n')
+            break
+    tp = list(list(_) for _ in zip(*line)) # transpose
+    for i in range(1, len(tp)):
         if tp[i] == tp[i-1]:
             check = True
             l, r = i-1, i
@@ -74,25 +61,25 @@ for b in B:
             if check:
                 r1 += i
                 break
+
+    # print('hori' if H else ' - vert',)
+    # if H:continue # part 1 can break p2 cannot
+
     ### part 2 (VTC)
-    for i in range(1, len(tp)):# - 1):
-        p2=0
-        l, r = i-1, i
+
+    for i in range(1, len(tp)):
+        p2 = 0
+        l, r = i - 1, i
         while l > -1 and r < len(tp):
-            for ll,rr in zip(tp[l], tp[r]):
-                if ll != rr:
-                    print('ll,rr',ll,rr, tp[l],tp[r])
+            for L, R in zip(tp[l], tp[r]):
+                if L != R:
                     p2+=1
-            """
-            if tp[l] != tp[r]:
-                p2 += 1
-            """
             l -= 1
             r += 1 
         if p2 == 1:
-            print('VTC p2:', 'col', i, tp[i-1],tp[i])
+            print('VTC p2:', 'col', i, '\n',''.join(tp[i - 1]),'\n',''.join(tp[i]),'\n')
             r2 += i
-            #break
+            break
 
 print("part 1:", r1)
 print("part 2:", r2)
