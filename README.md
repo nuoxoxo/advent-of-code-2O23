@@ -8,14 +8,14 @@
 8   | Iterate until it stops           | Lcm + and it will stop
 7   | Wildcards + Poker                | Sorting w/ custiom comparator
 6   | Quadratic equation               | Simply linear adding 
-5   | Overlapping Intervals            | (1) `\|` (2) `\|` (3) 
-||| left bound = max(curr & next L) 
-||| right bound = min(curr & next R) 
+5   | Overlapping Intervals            | ① `\|` ② `\|` ③ 
+||| `max(curr & next L)` for L bound 
+||| `min(curr & next R)` for R bound 
 4   | Math                             | Each child win gains pts of parent that wins 
-3   | Parsing Ints in djacent cells    | `edgecase 1` end-of-row numbers
+3   | Parse djacent integers           | `edgecase 1` end-of-row numbers
 ||                                     | `edgecase 2` identical nums in 3x3
-2   | Parsing String segment           | 
-1   | Parsing Number words             | 
+2   | Parse sring segment              | 
+1   | Parse number words               | 
 
 >  [thread]: Also skoh, with the other problems you could create a map of the problem and then use that map to solve the problem. Here it's so big that you have to compare distances, instead of checking if the map at certain coordinates contains a certain character. This is what makes it harder - _Adringar 15/12/22_
 
