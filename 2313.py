@@ -5,83 +5,46 @@ def dbg(T):
     for t in T:print(t)
 with open('13.' + str(F)) as file:
     temp = []
-    for line in file:
-        line=line.strip()
-        if not line:
+    for bloc in file:
+        bloc=bloc.strip()
+        if not bloc:
             A.append(temp)
             temp = []
         else:
-            temp.append([_ for _ in line])
+            temp.append([_ for _ in bloc])
     if temp:
         A.append(temp)
 # dbg(A)
-for line in A:
-    H=False
-    for i in range(1, len(line)):
-        if line[i] == line[i - 1]:
-            check = True
+for bloc in A:
+    p2 = True
+    def horver(bloc, p2=False): # yield either row index or col index
+        idx = 0
+        for i in range(1, len(bloc)):
+            diff = 0
             u, d = i - 1, i
-            while u > -1 and d < len(line):
-                if line[u] != line[d]:
-                    check = False
+            busted = False
+            while u > -1 and d < len(bloc):
+                for U, D in zip(bloc[u], bloc[d]):
+                    if U != D:
+                        diff += 1
+                    if diff > 1:
+                        busted = True
+                        break
+                if busted:
                     break
                 u -= 1
                 d += 1
-            if check:
-                H=True
-                r1 += i * 100
+            if not p2 and diff == 0 or p2 and diff == 1:
+                idx = i
                 break
+        return idx
+    tb = [_ for _ in zip(*bloc)] # transpose
+    L = horver(bloc) * 100 
+    R = horver(tb)
+    r1 += horver(bloc) * 100 + horver(tb)
+    r2 += horver(bloc,p2) * 100 + horver(tb,p2)
 
-    ### part 2 (HRZ)
-
-    for i in range(1, len(line)):
-        p2 = 0
-        u, d = i - 1, i
-        while u > -1 and d < len(line):
-            for U, D in zip(line[u], line[d]):
-                if U != D:
-                    p2+=1
-            u -= 1
-            d += 1
-        if p2 == 1:
-            r2 += (i) * 100
-            print('HRZ p2:', 'row', i, '\n',''.join(line[i-1]),'\n',''.join(line[i]),'\n')
-            break
-    tp = list(list(_) for _ in zip(*line)) # transpose
-    for i in range(1, len(tp)):
-        if tp[i] == tp[i-1]:
-            check = True
-            l, r = i-1, i
-            while l > -1 and r < len(tp):
-                if tp[l] != tp[r]:
-                    check = False
-                    break
-                l -= 1
-                r += 1
-            if check:
-                r1 += i
-                break
-
-    # print('hori' if H else ' - vert',)
-    # if H:continue # part 1 can break p2 cannot
-
-    ### part 2 (VTC)
-
-    for i in range(1, len(tp)):
-        p2 = 0
-        l, r = i - 1, i
-        while l > -1 and r < len(tp):
-            for L, R in zip(tp[l], tp[r]):
-                if L != R:
-                    p2+=1
-            l -= 1
-            r += 1 
-        if p2 == 1:
-            print('VTC p2:', 'col', i, '\n',''.join(tp[i - 1]),'\n',''.join(tp[i]),'\n')
-            r2 += i
-            break
-
-print("part 1:", r1)
-print("part 2:", r2)
-
-
+print("Part 1:", r1)
+assert(r1==37975)
+print("Part 2:", r2)
+assert(r2==32497)
