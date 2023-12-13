@@ -12,9 +12,8 @@
 ||| left bound = max(curr & next L) 
 ||| right bound = min(curr & next R) 
 4   | Math                             | Each child win gains pts of parent that wins 
-3   | Parsing Ints in djacent cells    |
-|||`edgecase 1` end-of-row numbers
-|||`edgecase 2` identical nums in 3x3
+3   | Parsing Ints in djacent cells    | `edgecase 1` end-of-row numbers
+||                                     | `edgecase 2` identical nums in 3x3
 2   | Parsing String segment           | 
 1   | Parsing Number words             | 
 
