@@ -31,32 +31,35 @@ def RollingLeft(A):
             A[i] = A[i][:prev+1] + sorted(A[i][prev+1:])[::-1]
     return A
 
-def North(A):
-    A = [ list(_) for _ in reversed(list(zip(*A)))]
-    A = RollingLeft(A)
-    #dbg(A)
-    return A
-
 # part 1
-p1 = North(p1)
+
+p1 = [ list(_) for _ in reversed(list(zip(*p1)))]
+p1 = RollingLeft(p1)
 for i, n in enumerate(list(zip(*p1))): r1 += n.count('O') * (len(p1) - i)
+
 print("part 1:", r1)
+assert(r1 in [113078,106648, 136])
 
 # part 2
 
 cc=1000000000
+
 def Cycle(A):
-    # 1 - NORTH ---> 90 deg counter clockwise, roll left, 90 deg clockwise to get back
+
+    # 1 - NORTH --> 90 deg counter clockwise, roll left, 90 deg clockwise to get back
     A = [ list(_) for _ in reversed(list(zip(*A)))]
     A = RollingLeft(A)
     A = [list(_)for _ in list(zip(*reversed(A)))]
+
     # 2 - WEST
     A = RollingLeft(A)
-    # 3 - SOUTH ---> 90 deg clockwise, roll, 90 deg counter CW to get back
+
+    # 3 - SOUTH --> 90 deg clockwise, roll, 90 deg counter CW to get back
     A = [list(_)for _ in list(zip(*reversed(A)))]
     A = RollingLeft(A)
     A = [ list(_) for _ in reversed(list(zip(*A)))]
-    # 4 - EAST ---> twice 90 deg counter clockwise, roll, twice 90 deg CW to get back
+
+    # 4 - EAST --> twice 90 deg counter clockwise, roll, twice 90 deg CW to get back
     A = [ list(_) for _ in reversed(list(zip(*A)))]
     A = [ list(_) for _ in reversed(list(zip(*A)))]
     A = RollingLeft(A)
@@ -64,9 +67,11 @@ def Cycle(A):
     A = [list(_)for _ in list(zip(*reversed(A)))]
     #dbg(A)
     return A
+
+S=set()
 ALL=[p2]
 state=''.join([''.join(r)for r in p2])
-S={state}
+S.add(state)
 t=None
 for _ in range(1,cc+1):
     p2 = Cycle(p2)
@@ -79,12 +84,13 @@ for _ in range(1,cc+1):
 if not t: print('something\'s wrong')
 
 start = ALL.index(p2)
-cycle_size = t - start
-offset = (cc - start) % cycle_size
-#print(offset)
-g = ALL[start + offset]
-g = [ list(_) for _ in reversed(list(zip(*g)))]
-for i, n in enumerate(list(zip(*g))): r2 += n.count('O') * (len(g) - i)
+sizeof = t - start
+offset = (cc - start) % sizeof
+
+p2 = ALL[start + offset]
+p2 = [ list(_) for _ in reversed(list(zip(*p2)))]
+for i, n in enumerate(list(zip(*p2))): r2 += n.count('O') * (len(p2) - i)
 
 print("part 2:", r2)
+assert(r2 in [94255, 87700, 64])
 
