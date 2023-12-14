@@ -7,40 +7,84 @@ def dbg(T):
 with open('14.' + str(F)) as file:
     for line in file:
         A.append([_ for _ in line.strip()])
-A = [ list(_) for _ in reversed(list(zip(*A)))]
-dbg(A)
-nomove = [[] for _ in range(len(A))]
+p1, p2 = [list(_) for _ in A], [list(_) for _ in A]
 
-for i,a in enumerate(A):
-    if '#' not in a:
-        continue
-    for index, char in enumerate(a):
-        if char == '#':
-            nomove[i].append(index)
+def RollingLeft(A):
+    nomove = [[] for _ in range(len(A))]
+    for i,a in enumerate(A):
+        if '#' not in a:
+            continue
+        for index, char in enumerate(a):
+            if char == '#':
+                nomove[i].append(index)
+    for i, allpos in enumerate(nomove):
+        if not allpos:
+            A[i] = sorted(A[i])[::-1]
+            #print('no cube')
+            continue
+        #print(allpos,'\n')
+        prev = -1
+        for pos in allpos:
+            A[i] = A[i][:prev+1] + sorted(A[i][prev+1:pos])[::-1] + A[i][pos:]
+            prev = pos
+        if prev != -1:
+            A[i] = A[i][:prev+1] + sorted(A[i][prev+1:])[::-1]
+    return A
 
-for i, allpos in enumerate(nomove):
-    #if pos: A[i] = sorted(A[i][:pos])[::-1] + A[i][pos:]
-    if not allpos:
-        A[i] = sorted(A[i])[::-1]
-        print('no cube')
-        continue
-    print(allpos)
-    prev = -1
-    for pos in allpos:
-        #print(A[i])
-        A[i] = A[i][:prev+1] + sorted(A[i][prev+1:pos])[::-1] + A[i][pos:]
-        #print(A[i])
-        # if pos == 1: print(A[i][:prev+1], sorted(A[i][prev+1:pos])[::-1], A[i][pos:])
-        prev = pos
-    if prev != -1:
-        A[i] = A[i][:prev+1] + sorted(A[i][prev+1:])[::-1]
-    print()
+def North(A):
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    A = RollingLeft(A)
+    #dbg(A)
+    return A
 
-dbg(A)
-for i, n in enumerate(list(zip(*A))): r1 += n.count('O') * (len(A) - i)
+# part 1
+p1 = North(p1)
+for i, n in enumerate(list(zip(*p1))): r1 += n.count('O') * (len(p1) - i)
+print("part 1:", r1)
+
+# part 2
 
 cc=1000000000
+def Cycle(A):
+    # 1 - NORTH ---> 90 deg counter clockwise, roll left, 90 deg clockwise to get back
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    A = RollingLeft(A)
+    A = [list(_)for _ in list(zip(*reversed(A)))]
+    # 2 - WEST
+    A = RollingLeft(A)
+    # 3 - SOUTH ---> 90 deg clockwise, roll, 90 deg counter CW to get back
+    A = [list(_)for _ in list(zip(*reversed(A)))]
+    A = RollingLeft(A)
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    # 4 - EAST ---> twice 90 deg counter clockwise, roll, twice 90 deg CW to get back
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    A = RollingLeft(A)
+    A = [list(_)for _ in list(zip(*reversed(A)))]
+    A = [list(_)for _ in list(zip(*reversed(A)))]
+    #dbg(A)
+    return A
+ALL=[p2]
+state=''.join([''.join(r)for r in p2])
+S={state}
+t=None
+for _ in range(1,cc+1):
+    p2 = Cycle(p2)
+    state=''.join([''.join(r)for r in p2])
+    if state in S:
+        t = _
+        break
+    S.add(state)
+    ALL.append(p2)
+if not t: print('something\'s wrong')
 
-print("part 1:", r1)
+start = ALL.index(p2)
+cycle_size = t - start
+offset = (cc - start) % cycle_size
+#print(offset)
+g = ALL[start + offset]
+g = [ list(_) for _ in reversed(list(zip(*g)))]
+for i, n in enumerate(list(zip(*g))): r2 += n.count('O') * (len(g) - i)
+
 print("part 2:", r2)
 
