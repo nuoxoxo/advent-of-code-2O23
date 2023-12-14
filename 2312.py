@@ -23,11 +23,11 @@ def DFS(line, resource, pt=None):
         return 1 # only valid case: IIF line is '' or '....' and no resources left
     if line[0] == '?': # Wildcard: to consider both possibilities
         OP = '.' + line[1:]
-        # '?#?' >> '##?' -1)
-        #       >> '.#?' -2)
+        # '?#?' >> '##?'  1)
+        #       >> '.#?'  2)
         DM = '#' + line[1:]
-        # '?.#' >> '#.#' -1)
-        #       >> '..#' -2)
+        # '?.#' >> '#.#'  1)
+        #       >> '..#'  2)
         return DFS(OP, resource, pt) + DFS(DM, resource, pt)
     if line[0] == '#':
         if not resource:
