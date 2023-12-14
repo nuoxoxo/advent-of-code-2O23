@@ -5,71 +5,86 @@ def dbg(T):
     for t in T:print(' '.join(t))
     print()
 with open('14.' + str(F)) as file:
-    for line in file: A.append([_ for _ in line.strip()])
-def TP(A):
-    A = [ list(_) for _ in reversed(list(zip(*A)))]
-    #dbg(A)
+    for line in file:
+        A.append([_ for _ in line.strip()])
+p1, p2 = [list(_) for _ in A], [list(_) for _ in A]
+
+def RollingLeft(A):
     nomove = [[] for _ in range(len(A))]
     for i,a in enumerate(A):
-        if '#' not in a: continue
+        if '#' not in a:
+            continue
         for index, char in enumerate(a):
-            if char == '#': nomove[i].append(index)
+            if char == '#':
+                nomove[i].append(index)
     for i, allpos in enumerate(nomove):
-        #if pos: A[i] = sorted(A[i][:pos])[::-1] + A[i][pos:]
         if not allpos:
             A[i] = sorted(A[i])[::-1]
             #print('no cube')
             continue
-        #print(allpos)
+        #print(allpos,'\n')
         prev = -1
         for pos in allpos:
-            #print(A[i])
             A[i] = A[i][:prev+1] + sorted(A[i][prev+1:pos])[::-1] + A[i][pos:]
-            #print(A[i])
-            # if pos == 1: print(A[i][:prev+1], sorted(A[i][prev+1:pos])[::-1], A[i][pos:])
             prev = pos
-        if prev != -1: A[i] = A[i][:prev+1] + sorted(A[i][prev+1:])[::-1]
-        #print()
+        if prev != -1:
+            A[i] = A[i][:prev+1] + sorted(A[i][prev+1:])[::-1]
     return A
-    #dbg(A)
-### part 1
-p2 = [list(_) for _ in A]
-p1 = [list(_) for _ in A]
-p1 = TP(p1)
-for i, n in enumerate(list(zip(*p1))): r1 += n.count('O') * (len(p1) - i)
 
-### part 2
+def North(A):
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    A = RollingLeft(A)
+    #dbg(A)
+    return A
+
+# part 1
+p1 = North(p1)
+for i, n in enumerate(list(zip(*p1))): r1 += n.count('O') * (len(p1) - i)
+print("part 1:", r1)
+
+# part 2
+
 cc=1000000000
-#p2 = [list(_) for _ in A]
-state=' '.join([' '.join(r)for r in p2])
-#ALL = [state]
+def Cycle(A):
+    # 1 - NORTH ---> 90 deg counter clockwise, roll left, 90 deg clockwise to get back
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    A = RollingLeft(A)
+    A = [list(_)for _ in list(zip(*reversed(A)))]
+    # 2 - WEST
+    A = RollingLeft(A)
+    # 3 - SOUTH ---> 90 deg clockwise, roll, 90 deg counter CW to get back
+    A = [list(_)for _ in list(zip(*reversed(A)))]
+    A = RollingLeft(A)
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    # 4 - EAST ---> twice 90 deg counter clockwise, roll, twice 90 deg CW to get back
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    A = [ list(_) for _ in reversed(list(zip(*A)))]
+    A = RollingLeft(A)
+    A = [list(_)for _ in list(zip(*reversed(A)))]
+    A = [list(_)for _ in list(zip(*reversed(A)))]
+    #dbg(A)
+    return A
 ALL=[p2]
-S=set()
-S.add(state)
-seen = None
-for i in range(cc)#1,cc+1):
-    for _ in range(4):
-        p2 = TP(p2)
-        #dbg(p2)
-    dbg(p2)
-    # to set
-    state  = ' '.join([' '.join(r)for r in p2])
+state=''.join([''.join(r)for r in p2])
+S={state}
+t=None
+for _ in range(1,cc+1):
+    p2 = Cycle(p2)
+    state=''.join([''.join(r)for r in p2])
     if state in S:
-        seen = i+1
+        t = _
         break
     S.add(state)
-    # to record
     ALL.append(p2)
-print(seen)
-print(ALL.index(p2))
-idx = ALL.index(p2)
-size = seen - idx
-fact = (cc - seen) // size
-idx = idx + fact%size 
-for i, n in enumerate(list(zip(*ALL[idx]))): r2 += n.count('O') * (len(ALL[idx]) - i)
+if not t: print('something\'s wrong')
 
-print("part 1:", r1)
+start = ALL.index(p2)
+cycle_size = t - start
+offset = (cc - start) % cycle_size
+#print(offset)
+g = ALL[start + offset]
+g = [ list(_) for _ in reversed(list(zip(*g)))]
+for i, n in enumerate(list(zip(*g))): r2 += n.count('O') * (len(g) - i)
+
 print("part 2:", r2)
-assert(r2 in [64,128,127])
-# hi . 95082 101814
 
