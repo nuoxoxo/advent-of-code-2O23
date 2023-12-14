@@ -1,5 +1,6 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
+14  | Transpose a 2D List              | Transpose w/ python oneliner
 13  | Wildcard + 2D Transpose          | Wildcard again this time no guessing needed
 12  | Wildcard + 1D Nonogram           | DFS + Permutation w/ rules
 11  | n(n-1)/2 Pairing                 | Keep only relevent coordinates 
