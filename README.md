@@ -1,6 +1,6 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-15  | Curiosly not graph               | `memorization` `ordered map`
+15  | Curiosly not graph               | `ordered map` `memorization` 
 ||
 14  | Transpose a 2D List              | `2d transposition` 
 ||
