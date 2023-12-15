@@ -7,7 +7,7 @@
 13  | Wildcard + 2D Transpose          | `2d transposition` `wildcard` 
 ||| ↳ Wildcard again but no guessing needed
 ||
-12  | 1D Nonogram                      | `wildcard` 
+12  | 1D Nonogram                      | `wildcard` `dfs` `permutation`
 ||| ↳ DFS + Permutation w/ rules
 ||
 11  | Coordinates Pairing              | - Hard time understanding part 2
