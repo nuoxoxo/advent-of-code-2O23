@@ -5,7 +5,7 @@
 14  | Transpose a 2D List              | `2d transposition` 
 ||
 13  | Wildcard + Transpose             | `2d transposition` `wildcard` 
-||| ↳ Wildcard again but no guessing needed
+||| ↳ The Wildcard has only 1 possible outcome
 ||
 12  | 1D Nonogram                      | `wildcard` `dfs` `permutation`
 ||| ↳ DFS + Permutation w/ rules
