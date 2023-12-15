@@ -4,7 +4,8 @@
 ||
 14  | Transpose a 2D List              | Transpose w/ python oneliner 
 ||
-13  | Wildcard + 2D Transpose          | Wildcard again this time no guessing needed
+13  | Wildcard + 2D Transpose          | `wildcard` 
+||| ↳ Wildcard again but no guessing needed
 ||
 12  | 1D Nonogram                      | `wildcard` 
 ||| ↳ DFS + Permutation w/ rules
