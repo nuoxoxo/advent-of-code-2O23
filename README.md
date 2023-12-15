@@ -2,7 +2,7 @@
 :-: | :- | :-
 15  | Curiosly not graph               | Array upon arrays like a struct 
 ||
-14  | Transpose a 2D List              | `transposing a 2d grid` 
+14  | Transpose a 2D List              | `2d transposition` 
 ||
 13  | Wildcard + 2D Transpose          | `wildcard` 
 ||| ↳ Wildcard again but no guessing needed
