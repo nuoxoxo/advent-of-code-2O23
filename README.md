@@ -2,7 +2,7 @@
 :-: | :- | :-
 15  | Curiosly not graph               | Array upon arrays like a struct 
 ||
-14  | Transpose a 2D List              | Transpose w/ python oneliner 
+14  | Transpose a 2D List              | `transposing a 2d grid` 
 ||
 13  | Wildcard + 2D Transpose          | `wildcard` 
 ||| ↳ Wildcard again but no guessing needed
