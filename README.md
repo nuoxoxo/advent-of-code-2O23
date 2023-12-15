@@ -106,13 +106,6 @@ Write a denon.json
 
 # :christmas_island: AOC
 
-- [ ] todo : deploy 2214 - should be fun
-- [ ] todo : 2214 dropping sand game in cc
-- [ ] todo : 2211 monkeys' worry level in cc
-- [ ] todo : deploy 2224 
-- [x] _done_ : 2224 bfs in cc
-- [x] _done_ : 1610 toposort in python
-
 <img src='https://deno.com/images/artwork/hashrock_simple.png?__frsh_c=dad21828de649d12df5a23c572b88f3a3a73d0dc' width='13px' />|1|2|3|4|5|6|7|8|9|0
 --|-|-|-|-|-|-|-|-|-|-
 P |.|.|.|.|.|.|.|.|.|.
