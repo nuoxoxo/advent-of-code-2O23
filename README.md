@@ -4,7 +4,7 @@
 ||
 14  | Transpose a 2D List              | `2d transposition` 
 ||
-13  | Wildcard + 2D Transpose          | `wildcard` 
+13  | Wildcard + 2D Transpose          | `2d transposition` `wildcard` 
 ||| ↳ Wildcard again but no guessing needed
 ||
 12  | 1D Nonogram                      | `wildcard` 
