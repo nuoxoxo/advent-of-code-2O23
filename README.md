@@ -7,29 +7,31 @@
 13  | Wildcard + Transpose             | `2d transposition` `wildcard` 
 ||| ↳ The Wildcard has only 1 possible outcome
 ||
-12  | 1D Nonogram                      | `wildcard` `dfs` `permutation`
-||| ↳ DFS + Permute w/ wildcards to get max outcome + Use this permutation in a custom comparator
+12  | 1D Nonogram                      | `wildcard`  `permutation` `recursive / DFS`
+||| ↳ Guess wildcards to get max outcome
+||| ↳ Permute inside a custom comparator
+||| ↳ DFS 
 ||
-11  | Coordinates Pairing              | - Hard time understanding part 2
+11  | Coordinates Pairing              | Hard part 2 - `coordinates` `visualizing`
 ||| ↳ Keep only relevent coordinates 
 ||| ↳ n(n-1)/2 Pairing
 ||
-10  | Graph                            | - Hard
+10  | Graph                            | Hard problem - `BFS` 
 ||| ↳ BFS + inside-a-polygon principle 
 ||
-9   | Bruteforce Sim                   | - Medium
+9   | Bruteforce Sim                   | Medium
 ||| ↳ Append rows until row is all 0
 ||
-8   | Iterate indefinitely             | - Medium, a grid of states problem
+8   | Iterate indefinitely             | Medium, a grid of states problem
 ||| ↳ Lcm + iterate until it stops 
 ||
-7   | Wildcards + Poker                | - Hard day 
+7   | Wildcards + Poker                | Hard day 
 ||| ↳ Sorting hands w/ custiom comparator
 ||
-6   | Quadratic equation               | - Simply 
+6   | Quadratic equation               | Easy
 ||| ↳ linear adding 
 ||
-5   | Intervals                        | - Hard day visualizing overlapping intervals
+5   | Intervals                        | Hard - `visualizing` `overlapping intervals`
 ||| ↳ ① `\|` ② `\|` ③ 
 ||| ↳ `max(curr & next L)` for L bound 
 ||| ↳ `min(curr & next R)` for R bound 
