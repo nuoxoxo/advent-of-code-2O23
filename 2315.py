@@ -1,11 +1,7 @@
 F = 0
 r1, r2 = 0, 0
 A = []
-from collections import defaultdict
-with open('15.' + str(F)) as file:
-    temp = []
-    for line in file:A.append(line.strip())
-A=A[0].split(',')
+with open('15.' + str(F)) as file: line = file.read()
 
 # part 1
 
@@ -15,7 +11,10 @@ def hashing(a)->int:
         res = (res + ord(c)) * 17 % 256
     return res
 
+A=line.strip().split(',')
 for a in A: r1 += hashing(a)
+
+print("part 1:", r1)
 
 # part 2
 
@@ -53,8 +52,6 @@ for i,sub in enumerate(B):
     for slot, kv in enumerate(sub):
         r2 += (i + 1) * (slot + 1) * kv[1]
 
-
-print("part 1:", r1)
 print("part 2:", r2)
 
 
