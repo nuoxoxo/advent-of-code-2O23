@@ -6,7 +6,8 @@
 ||
 13  | Wildcard + 2D Transpose          | Wildcard again this time no guessing needed
 ||
-12  | 1D Nonogram                      | `wildcard` DFS + Permutation w/ rules
+12  | 1D Nonogram                      | `wildcard` 
+||| ↳ DFS + Permutation w/ rules
 ||
 11  | Coordinates Pairing              | - Hard time understanding part 2
 ||| ↳ Keep only relevent coordinates 
