@@ -8,7 +8,7 @@
 ||| ↳ The Wildcard has only 1 possible outcome
 ||
 12  | 1D Nonogram                      | `wildcard` `dfs` `permutation`
-||| ↳ DFS + Permutation w/ rules
+||| ↳ DFS + Permute w/ wildcards to get max outcome + Use this permutation in a custom comparator
 ||
 11  | Coordinates Pairing              | - Hard time understanding part 2
 ||| ↳ Keep only relevent coordinates 
