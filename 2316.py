@@ -42,23 +42,19 @@ def BFS(A, curr, move) -> int:
                 coor = (curr, move)
                 todo.append(coor)
             else: # split into 2 <--- moving horizontal
-                move = (0, -1)
-                coor = (curr, move)
-                todo.append(coor)
-                move = (0, 1)
-                coor = (curr, move)
-                todo.append(coor)
+                for n in [-1, 1]:
+                    move = (0, n)
+                    coor = (curr, move)
+                    todo.append(coor)
         elif t == '|':
             if move[0] != 0:
                 coor = (curr, move)
                 todo.append(coor)
             else:
-                move = (1, 0)
-                coor = (curr, move)
-                todo.append(coor)
-                move = (-1, 0)
-                coor = (curr, move)
-                todo.append(coor)
+                for n in [-1, 1]:
+                    move = (n, 0)
+                    coor = (curr, move)
+                    todo.append(coor)
         for job in todo:
             if job in S: continue
             D.append(job)
