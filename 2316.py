@@ -15,9 +15,11 @@ S = set()
 #S.add((((0, -1), (0, 1))))
 
 def BFS(A, curr, move) -> int:
+
+    D = [(curr, move)] # begin from top left moving right
     R, C = len(A), len(A[0])
     S = set()
-    D = [(curr, move)] # top left moving right
+
     while D:
         curr, move = D.pop(0)
         r, c = curr
@@ -36,25 +38,25 @@ def BFS(A, curr, move) -> int:
             coor = (curr, move)
             todo.append(coor)
         elif t == '\\':
-            move = (move[1], move[0])
+            move = move[::-1]
             coor = (curr, move)
             todo.append(coor)
-        elif t == '-':
-            if move[1] != 0:
-                coor = (curr, move)
-                todo.append(coor)
-            else: # split into 2 <--- moving horizontal
-                for n in [-1, 1]:
-                    move = (0, n)
-                    coor = (curr, move)
-                    todo.append(coor)
         elif t == '|':
-            if move[0] != 0:
+            if move[0] != 0: # riding
                 coor = (curr, move)
                 todo.append(coor)
             else:
-                for n in [-1, 1]:
-                    move = (n, 0)
+                for rr in [-1, 1]:
+                    move = (rr, 0)
+                    coor = (curr, move)
+                    todo.append(coor)
+        elif t == '-':
+            if move[1] != 0: # riding
+                coor = (curr, move)
+                todo.append(coor)
+            else: # split into 2 <--- moving horizontal
+                for cc in [-1, 1]:
+                    move = (0, cc)
                     coor = (curr, move)
                     todo.append(coor)
         for job in todo:
