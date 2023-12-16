@@ -7,9 +7,12 @@ ok=False
 with open('08.' + str(F)) as file:
     for line in file:
         line=line.strip()
-        if line == '':ok=True
-        elif not ok:P=line
-        else:A.append(line)
+        if line == '':
+            ok=True
+        elif not ok:
+            P=line
+        else:
+            A.append(line)
 L,R={},{}
 D={}#,counter={},{}#defaultdict(str)#{}
 t=0
@@ -67,9 +70,9 @@ while 1:
                     res = res * v // gcd
                 Rec, r2 = tmp, res
                 break
-        if found:break
         Nodes.append(node)
-    if found:break
+    if found:
+        break
     A = Nodes.copy()
     t += 1
 print('part 1:', r1)
