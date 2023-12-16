@@ -64,8 +64,7 @@ def BFS(A, curr, move) -> int:
             D.append(job)
             S.add(job)
     SS = set()
-    SA = [_ for _ in S]
-    for p, _ in SA:
+    for p, _ in S:
         SS.add(p)
     return len(SS)
 r1 = BFS(A, (0, -1),(0,1))
