@@ -7,11 +7,13 @@ def dbg(T):
 with open('16.' + str(F)) as file:
     for line in file:
         A.append([_ for _ in line.strip()])
-print(A)
+
 R, C = len(A), len(A[0])
 S = set()
+#print(A)
 #D = [((0, -1), (0, 1))] # top left moving right
 #S.add((((0, -1), (0, 1))))
+
 def BFS(A, curr, move) -> int:
     R, C = len(A), len(A[0])
     S = set()
@@ -63,13 +65,18 @@ def BFS(A, curr, move) -> int:
     for p, _ in S:
         SS.add(p)
     return len(SS)
+
+# part 1
 r1 = BFS(A, (0, -1),(0,1))
+
+# part 2
 for r in range(R):
     r2 = max(r2, BFS(A, (r, -1), (0,  1)))
     r2 = max(r2, BFS(A, (r,  C), (0, -1)))
 for c in range(C):
     r2 = max(r2, BFS(A, (-1, c), ( 1, 0)))
     r2 = max(r2, BFS(A, ( R, c), (-1, 0)))
+
 print("part 1:", r1)
 print("part 2:", r2)
 
