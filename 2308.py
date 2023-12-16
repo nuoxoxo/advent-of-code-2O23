@@ -7,9 +7,12 @@ ok=False
 with open('08.' + str(F)) as file:
     for line in file:
         line=line.strip()
-        if line == '':ok=True
-        elif not ok:P=line
-        else:A.append(line)
+        if line == '':
+            ok=True
+        elif not ok:
+            P=line
+        else:
+            A.append(line)
 L,R={},{}
 D={}#,counter={},{}#defaultdict(str)#{}
 t=0
