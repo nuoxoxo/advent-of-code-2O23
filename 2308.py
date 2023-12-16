@@ -67,9 +67,9 @@ while 1:
                     res = res * v // gcd
                 Rec, r2 = tmp, res
                 break
-        if found:break
         Nodes.append(node)
-    if found:break
+    if found:
+        break
     A = Nodes.copy()
     t += 1
 print('part 1:', r1)
