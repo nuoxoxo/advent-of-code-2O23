@@ -1,7 +1,7 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-17  | BFS w/ heapq DFS                | `priority queue` `heapq`
-||| - cf. 2021 day 15 
+17  | Dijkstra                         | `priority queue` `heapq` `dijkstra`
+||| - cf. 2021/day/15 
 ||
 16  | BFS                              | Bruteforce traversal under rules
 || 
