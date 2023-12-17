@@ -3,7 +3,7 @@ r1, r2 = 0, 0
 A = []
 AA=[]
 def dbg(T):
-    for t in T:print(t)
+    for t in T:print(' '.join([str(_)for _ in t]))
 import heapq
 from collections import defaultdict
 with open('17.' + str(F)) as file:
@@ -15,19 +15,19 @@ def min_loss2(A) -> int:
     DR = [1,0,-1, 0]
     DC = [0,1, 0,-1]
     loss = None
-    seen = set()
-    Q = [ (0, 0, (0, 0, 0, 0)) ]
-    # Q = [ ( (A[0][0]), 0, (0, 0, 0, 0) ) ]
+    S = { (0, 0, (0, 0, 0, 0)) }
+    east = ( 0, 0, (0, 0, 0, 1) )
+    south = ( 0, 0, (0, 0, 1, 0) )
+    Q = [ east, south ]
     heapq.heapify( Q )
     while Q:
         loss, step, D = heapq.heappop( Q )
         r, c, dr, dc = D
         if r < 0 or r > R - 1 or c < 0 or c > C - 1: continue
         if r == R - 1 and c == C - 1 and step > 3:return loss#break
-        # if r == R - 1 and c == C - 1:return loss#break
-        if (step, D) in seen: continue
-        seen.add( (step, D) )
-        if r == 0 and c == 0 or step > 9:
+        if (step, D) in S: continue
+        S.add( (step, D) )
+        if step > 9:
             step = 1
             for rr, cc in zip(DR, DC):
                 if rr == dr and cc == dc or rr == -dr and cc == -dc: continue
@@ -57,18 +57,19 @@ def min_loss(A) -> int:
     DC = [0, 1,  0, -1]
     dbg(A)
     loss = None
-    seen = set()
-    Q = [ (0, 0, (0, 0, 0, 0)) ]
-    # Q = [ ( (A[0][0]), 0, (0, 0, 0, 0) ) ]
+    S = { (0, 0, (0, 0, 0, 0)) }
+    east = ( 0, 0, (0, 0, 0, 1) )
+    south = ( 0, 0, (0, 0, 1, 0) )
+    Q = [ east, south ]
     heapq.heapify( Q )
     while Q:
         loss, step, D = heapq.heappop( Q )
         r, c, dr, dc = D
         if r < 0 or r > R - 1 or c < 0 or c > C - 1: continue
         if r == R - 1 and c == C - 1:return loss#break
-        if (step, D) in seen: continue
-        seen.add( (step, D) )
-        if r == 0 and c == 0 or step > 2:
+        if (step, D) in S: continue
+        S.add( (step, D) )
+        if step > 2:
             step = 1
             for rr, cc in zip(DR, DC):
                 if rr == dr and cc == dc or rr == -dr and cc == -dc: continue
@@ -107,9 +108,9 @@ def min_loss(A) -> int:
         r, c, dr, dc = D
         if r < 0 or r > R - 1 or c < 0 or c > C - 1: continue
         if r == R - 1 and c == C - 1:return loss#break
-        # if (loss, D) in seen: continue
-        if D in seen: continue
-        seen.add((r,c,dr,dc))
+        # if (loss, D) in S: continue
+        if D in S: continue
+        S.add((r,c,dr,dc))
         for step in range(1,4):
             newr = r + dr * step
             newc = c + dc * step
@@ -139,3 +140,5 @@ r2=min_loss2(A)
 
 print("part 1:", r1)
 print("part 2:", r2)
+assert(r1 in [102, 1246, 59])
+assert(r2 in [94, 1389, 71])
