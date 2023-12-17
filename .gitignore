@@ -1,5 +1,6 @@
 *
 !.env.sample
+!*.cc
 !*.py
 !*.ts
 !*.go
