@@ -1,7 +1,3 @@
-//  Dijkstra (queue) tells you the fewest steps we can take
-//  Dijkstra uses a priority queue and chooses the cheapest path each time
-// borrowing code from 2021/day/15
-
 #include "iostream"
 #include "queue"
 //#include "utility"
@@ -42,15 +38,16 @@ int main ()
     int p2 = DIJK (A, true);
     cout << "Part 2: " << p2 << endl;
 
+    assert(p1 == 102 || p1 == 1246 || p1 == 59);
+    assert(p2 == 94 || p2 == 1389 || p2 == 71);
+
 }
 
 int DIJK (vector<vector<int>> & A, bool p2)
 {
-    set<vi> seen;
     auto cmp = [](const vi & L, const vi & R) {
         return L[0] > R[0];
     };
-    priority_queue< vi, vvi, decltype( cmp ) > Q( cmp);
     //priority_queue<vector<int>> Q;
     vector<int>::iterator it;
     int R = A.size(), C = A[0].size();
@@ -58,7 +55,12 @@ int DIJK (vector<vector<int>> & A, bool p2)
     int newloss, newr, newc, rr, cc, i;
     vi DR{1,0,-1, 0};
     vi DC{0,1, 0,-1};
-    Q.push({0,step,r,c,dr,dc}); // loss, step, r, c, dr, dc
+    vi east{0,step,0,0,0,1};
+    vi south{0,step,0,0,1,0};
+    priority_queue< vi, vvi, decltype( cmp ) > Q( cmp);
+    Q.push( east );
+    Q.push( south );
+    set<vi> seen{ {0,0,0,0,0} };
     while ( ! Q.empty())
     {
         vi temp = Q.top() ;
@@ -76,7 +78,7 @@ int DIJK (vector<vector<int>> & A, bool p2)
         if (seen.find( { step, r, c, dr, dc } ) != seen.end())
             continue ;
         seen.insert({step, r, c, dr, dc } );
-        if (!r && !c || step > (p2 ? 9 : 2)) // PART 2
+        if (step > (p2 ? 9 : 2)) // PART 2
         {
             step = 1;
             i = -1;
