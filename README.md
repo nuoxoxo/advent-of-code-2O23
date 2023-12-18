@@ -1,5 +1,6 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
+17  | Polygon                          | Hard problem - `shoelace algorithm` `pick theorem`
 17  | Dijkstra                         | `priority queue` `heapq` `dijkstra`
 ||| - cf. 2021/day/15 
 ||
@@ -18,11 +19,11 @@
 ||| - Permute inside a custom comparator
 ||| - DFS 
 ||
-11  | Coordinates Pairing[^Grid]              | Hard part 2 - `coordinates` `visualizing`
+11  | Coordinates Pairing[^Grid]       | Hard part 2 - `coordinates` `visualizing`
 ||| - Keep only relevent coordinates 
 ||| - n(n-1)/2 Pairing
 ||
-10  | Graph                            | Hard problem - `BFS` 
+10  | Polygon + Graph                  | Hard problem - `BFS` 
 ||| - BFS + inside-a-polygon principle 
 ||
 9   | Bruteforce Sim                   | Medium
