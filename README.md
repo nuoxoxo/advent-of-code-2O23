@@ -1,6 +1,7 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :-
-17  | Polygon                          | Hard problem - `shoelace algorithm` `pick theorem`
+18  | Polygon                          | Hard problem - `shoelace algorithm` `pick theorem`
+||
 17  | Dijkstra                         | `priority queue` `heapq` `dijkstra`
 ||| - cf. 2021/day/15 
 ||
