@@ -1,5 +1,8 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
-:-: | :- | :-
+:-: | :- | :- 
+19  | Toposort                         | Hard one - `interval` for the 2nd part `BFS`
+|| still no part 2
+||
 18  | Polygon                          | Hard problem - `shoelace algorithm` `pick theorem`
 ||
 17  | Dijkstra                         | `priority queue` `heapq` `dijkstra`
@@ -8,21 +11,21 @@
 16  | BFS                              | Bruteforce traversal under rules
 || 
 15  | Hashmap                          | `ordered map implementation` `memorization` 
-||| - Biggest pb is in reading comprehension
+||| - Biggest pb is in reading comprehension 
 ||
 14  | Transpose a 2D List              | `2d transposition` 
 ||
 13  | Wildcard + Transpose             | `2d transposition` `wildcard` 
-||| - The Wildcard has only 1 possible outcome
+||| - The Wildcard has only 1 possible outcome 
 ||
 12  | 1D Nonogram                      | `wildcard`  `permutation` `recursive / DFS`
-||| - Guess wildcards to get max outcome
-||| - Permute inside a custom comparator
+||| - Guess wildcards to get max outcome 
+||| - Permute inside a custom comparator 
 ||| - DFS 
 ||
 11  | Coordinates Pairing[^Grid]       | Hard part 2 - `coordinates` `visualizing`
 ||| - Keep only relevent coordinates 
-||| - n(n-1)/2 Pairing
+||| - n(n-1)/2 Pairing 
 ||
 10  | Polygon + Graph                  | Hard problem - `BFS` 
 ||| - BFS + inside-a-polygon principle 
