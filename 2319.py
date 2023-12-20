@@ -37,7 +37,6 @@ for line in down:
     for xpr in line:
         key, val = xpr.split('=')
         flow[key] = int(val)
-    # DBG_(flow)
     res = None
     curr = 'in'
     found = False
@@ -52,7 +51,6 @@ for line in down:
                 curr = line
             else:
                 key, op, val, dest = line
-                # Printer('line?',key, op, val, dest)
                 if op == '>':
                     good = flow[key] > val
                 elif op == '<':
@@ -68,8 +66,6 @@ for line in down:
                 break
             
     if found and res == 'A':
-        #print('WIN')
-        #DBG_(flow)
         r1 += sum(flow.values())
 
 Printer("part 1:", r1)
@@ -79,13 +75,14 @@ Printer("part 1:", r1)
 instructions = [
     ('in', [range(1,4001)] * 4)
 ]
-#Printer(instructions)
 
 AC = 0
+
 while instructions :
+
     inst = instructions.pop(0)
     curr, rangex4 = inst
-    #Printer('4 ranges/', curr, rangex4)
+
     if curr in 'AR':
         if curr == 'A': # case: R/ do nothing and pass; A/ add :in all combinations
             lengths = [len(_) for _ in rangex4]
@@ -93,13 +90,12 @@ while instructions :
             for n in lengths: lengths_product *= n
             AC += lengths_product
         continue
+
     *conditions, endpoint = D[curr]
-    #Printer('D[curr]/',D[curr],)
-    #Printer('subdict_xcpt_dest/', conditions, '\nendpoint/',endpoint)
+
     for key, op, val, dest in conditions:
         idx = 'xmas'.index(key)
         _range = rangex4[ idx ]
-        #Printer('key,rangex4[key]/',key,rangex4[idx],'of',rangex4)
         if val not in _range:
             continue
         # split in half
@@ -118,10 +114,9 @@ while instructions :
         idx = 'xmas'.index(key)
         L, R = range(*L),range(*R)
         updated_range_x4 = [_ for _ in rangex4]
-        updated_range_x4 [idx] = L
-        #Printer(L, R)
-        instructions.append( ( dest, updated_range_x4 ) )
-        rangex4[ idx ] = R
+        updated_range_x4[idx] = L
+        instructions.append( (dest, updated_range_x4) )
+        rangex4[idx] = R
     instructions.append ( (endpoint, rangex4) )
 
 r2 = AC
@@ -129,3 +124,4 @@ r2 = AC
 Printer("part 2:", r2)
 assert(r1 in [19114, 353553])
 assert(r2 in [124615747767410, 167409079868000])
+
