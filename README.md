@@ -1,7 +1,7 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :- 
 19  | Toposort                         | Hard one - `interval` for the 2nd part `BFS`
-||| - still no part 2
+||| - difficult part 2
 ||
 18  | Polygon                          | Hard problem - `shoelace algorithm` `pick theorem`
 ||
