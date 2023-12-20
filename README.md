@@ -1,6 +1,6 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :- 
-19  | Toposort                         | Hard one 
+20  | Toposort                         | Hard one 
 ||| - _no idea for part2_
 19  | Toposort                         | Hard one - `interval` for the 2nd part `BFS` 
 ||| - difficult part 2
