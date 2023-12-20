@@ -2,6 +2,7 @@
 :-: | :- | :- 
 20  | Toposort                         | Hard one 
 ||| - _no idea for part2_
+||
 19  | Toposort                         | Hard one - `interval` for the 2nd part `BFS` 
 ||| - difficult part 2
 ||
