@@ -6,7 +6,7 @@
 19  | Toposort                         | Hard one - `interval` for the 2nd part `BFS` 
 ||| - difficult part 2
 ||
-18  | Polygon                          | Hard problem - `shoelace algorithm` `pick theorem`
+18  | Polygon Geometry                 | Hard problem - `shoelace algorithm` `pick theorem`
 ||
 17  | Dijkstra                         | `priority queue` `heapq` `dijkstra`
 ||| - cf. 2021/day/15 
