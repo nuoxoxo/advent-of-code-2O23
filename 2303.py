@@ -1,4 +1,3 @@
-import re
 tst = 0
 # 541497 545250 545808 too hi - p1
 r1, r2 = 0, 0
@@ -6,7 +5,6 @@ a = []
 with open('03.' + str(tst)) as file:
     for line in file:
         a.append(line[:-1])
-        #tmp = [int(_) for _ in re.findall(r'\d+', line[:-1])]
 R, C = len(a), len(a[0])
 T = []
 num = ''
