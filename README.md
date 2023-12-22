@@ -2,6 +2,7 @@
 :-: | :- | :- 
 21  | Toposort                         | `BFS`
 ||| - a furthermore harder part 2 *geez*
+||
 20  | Toposort                         | `BFS` 
 ||| - an even harder part 2 . done
 ||
