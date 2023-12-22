@@ -1,5 +1,8 @@
 :christmas_tree:|:santa:|<img src='https://deno.com/images/artwork/HypnoDeno.gif?__frsh_c=dad2' width='15px' /> 
 :-: | :- | :- 
+22  | Simulation                       | `BFs`
+||| - length-1 beams falling on 3-D plain
+||
 21  | Toposort                         | `BFS`
 ||| - a furthermore harder part 2 *geez*
 ||
