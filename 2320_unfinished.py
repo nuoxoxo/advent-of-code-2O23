@@ -21,14 +21,13 @@ def dbg( Thing, *names ):
         for thing in things: print( thing )
     print()
 
-BC = []
-FF,CJ= {},{}#,{}
-sep='-'*6
+BC = [] # broadcaster
+FF,CJ= {},{} # Flip-flop % - Conjunction &
 
 for line in lines:
     key, val = line.split(' -> ')
     val = val.split(', ')
-    print(key,val,'from/',line)
+    print(key,val)#,'from/',line)
     if 'broadcast' in key:
         BC = val
     symbol, key = key[0], key[1:]
@@ -45,10 +44,10 @@ sent_signals = [T, 0]
 
 CJ_find_wayback = dict()
 for conj in CJ:
-    CJ_find_wayback[conj] = {}
+    CJ_find_wayback[ conj ] = {}
     for k, v in FFCJ.items():
         if conj in v:
-            CJ_find_wayback[conj][k] = 0# = {k: 0}
+            CJ_find_wayback[ conj ][k] = 0# = {k: 0}
 dbg(CJ_find_wayback, 'CJ_find_wayback')
 
 CJ_with_pulse = []#{}
