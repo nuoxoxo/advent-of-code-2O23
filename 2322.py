@@ -1,4 +1,6 @@
-infile=0 # 895 too hi 
+infile=0
+# p1: 895 hi 
+# p2: 1200 lo
 Blocs = [] # a bloc is a tuple of tuple-pairs ((x,y,z),(x2,y2,z2))
 with open('22.' + str(infile)) as file:
     for line in file:
@@ -50,27 +52,80 @@ while True:
         break
 print(seen, len(seen))
 
-res = 0
-for i, beam in enumerate(Beams) :
-    for layer in beam:
-        # suppose this one beam is not there
-        seen.discard( layer )
-    moved = False
-    for k, other in enumerate(Beams):
-        if k == i: continue
-        stuck = False
-        for layer in other:
-            a, b, c = layer
-            below = ( a, b, c - 1 )
-            if below not in other and below in seen:#or c == 1:
-                stuck = True
-            if c == 1:
-                stuck = True
-        if not stuck:
-            moved = True
-    res += not moved
-    for layer in beam:
-        # end sim, added beam back
-        seen.add( layer )
-print(res)
-assert(res in [ 405, 5 ])
+
+# Both parts
+
+from copy import deepcopy
+
+def p1solver(S, B):
+    seen = deepcopy(S)
+    Beams = deepcopy(B)
+    res = 0
+    for i, beam in enumerate(Beams) :
+        for layer in beam:
+            # suppose this one beam is not there
+            seen.discard( layer )
+        moved = False
+        for k, other in enumerate(Beams):
+            if k == i: continue
+            stuck = False
+            for layer in other:
+                a, b, c = layer
+                below = ( a, b, c - 1 )
+                if below not in other and below in seen or c == 1:
+                    stuck = True
+            if not stuck:
+                moved = True
+        res += not moved
+        for layer in beam:
+            # end sim, added beam back
+            seen.add( layer )
+    return res
+
+
+# Part 2
+
+def p2solver(seen, Beams):
+
+    saved_seen = deepcopy( seen )
+    saved_beams = deepcopy( Beams )
+
+    res = 0
+    for i, beam in enumerate(Beams) :
+        falling = set()
+        seen = deepcopy( saved_seen )
+        Beams = deepcopy( saved_beams )
+        for layer in beam:
+            # suppose this one beam is not there
+            seen.discard( layer )
+        while True:
+            moved = False
+            for k, other in enumerate(Beams):
+                if k == i: continue
+                stuck = False
+                for layer in other:
+                    a, b, c = layer
+                    below = ( a, b, c - 1 )
+                    if below not in other and below in seen or c == 1:
+                        stuck = True
+                if not stuck:
+                    falling.add( k )
+                    Beams[ k ] = [ (a, b, c - 1) for (a, b, c) in other ]
+                    for (a, b, c) in other:
+                        seen.discard( (a, b, c) )
+                        seen.add( (a, b, c - 1) )
+                    moved = True
+            if not moved:
+                break
+        res += len(falling)
+    return res
+
+p1 = p1solver( seen, Beams )
+print('part 1:', p1)
+
+p2 = p2solver( seen, Beams )
+print('part 2:', p2)
+
+assert(p1 in [ 405, 5 ])
+assert(p2 in [ 61297, 7 ])
+
