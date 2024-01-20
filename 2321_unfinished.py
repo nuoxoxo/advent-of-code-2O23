@@ -27,7 +27,7 @@ for r in range(R):
 dbg(A)
 
 D = [ start ]
-P,seen, = set(), {(r,c)}
+P,seen, = set(), {(r,c)} # P ~ plots
 DR=[1,0,-1,0]
 DC=[0,1,0,-1]
 while D:
